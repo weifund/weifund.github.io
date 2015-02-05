@@ -21,11 +21,7 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    
-    <script type="text/javascript" src="js/bignumber.min.js"></script>
-    <script type="text/javascript" src="js/ethereum.js"></script>
-    <script type="text/javascript" src="js/CrowdFundrr.js"></script>
-    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -33,21 +29,44 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <style type="text/css">
+    
+    <script type="text/javascript" src="js/bignumber.min.js"></script>
+    <script type="text/javascript" src="js/ethereum.js"></script>
+    <script type="text/javascript" src="js/CrowdFundrr.js"></script>
+    <!-- Contract Code Basics
+    	var eth = web3.eth;
+	var contractAbi = [];
+	var contractAddr = "0x6465940d1a1a7901f89476ff87a945e0fb1d07db";
+	var contract = eth.contract(contractAddr, contractAbi);
 	
-	.light
-	{
-		font-weight: lighter;
-	}
+	// New Campaign Transaction
+	// newCampaign(string32 name, string32 website, address beneficiary, uint goal, uint timelimit)
+	// contract.transact().newCampaign("My Great Campaign"
+	// , "mygreatcampaign.com", "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
 	
-	</style>
+	// Contribute to Campaign
+	// contribute(uint campaignID)
+	// contract.transact({value: 34598}).newCampaign();
+	
+	// Check Goal Reached
+	// checkGoalReached(uint campaignID) returns (bool reached) 
+	// contract.transact().checkGoalReached(campaignID);
+	
+	// Get Number of Campaigns
+	// get_numCampaigns() returns (uint r_numCampaigns)
+	// var get_numCampaigns = contract.call().get_numCampaigns();
+	
+	// Get Campaign Function (uint ID)
+	var getCampaign = contract.call().getCampaign(34827423);
+
+	var number = web3.eth.number;
+	var info = web3.eth.block(number);
+	
+	// contract.transact({from: addr2, value: 100000}).join(addr1);-->
 
 </head>
 
 <body>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
@@ -84,118 +103,194 @@
         <!-- /.container -->
     </nav>
 
-	<a  name="campaign"></a>
-    <div class="content-section-b">
 
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
         <div class="container">
 
-            <div class="row" style="margin-top: 40px;">
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <h2>Search Campaign</h2>
-                    
-                    <br>
-                    
-                    <div class=" input-group input-group-lg">
-                    	<input type="text" id="campaign_id" class="form-control" aria-describedby="sizing-addon1" style="width: 200px; margin-right: 10px;" placeholder="Campaign #ID">
-                        <a href="#" class="btn btn-default btn-lg" onClick="get_campaign();">Search</a>
-                    </div>
-                    
-                    <br><br>
-                    
-                    <h2>Recent</h2><br>
-                    
-                	<div>
-                        <h4 class="light"><a href="">Open Source: Radio Potdast</a></h4>                        
-                        <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
-                          </div>
-                        </div>                        
-                        <ul class="list-inline">
-                            <li><span>43%</span><br><span class="text-muted light">funded</span>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Bring your creative project to life</h1>
+                        <h3>Next generation crowd funding is here.</h3>
+                        <hr class="intro-divider">
+                                <a href="#new" class="btn btn-primary  btn-lg"><span class="network-name">Start a Campaign</span></a>
+                        <!--<ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
-                            <li><span>5</span><br><span class="text-muted light">backers</span>
+                            <li>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
-                            <li><span>$13,299</span><br><span class="text-muted light">pledged</span>
+                            <li>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                             </li>
-                            <li><span>10</span><br><span class="text-muted light">days to Go</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                	<div style="margin-top: 20px;">
-                        <h4 class="light"><a href="">Save a our Park</a></h4>                        
-                        <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
-                          </div>
-                        </div>                        
-                        <ul class="list-inline">
-                            <li><span>63%</span><br><span class="text-muted light">funded</span>
-                            </li>
-                            <li><span>100</span><br><span class="text-muted light">backers</span>
-                            </li>
-                            <li><span>$23,299</span><br><span class="text-muted light">pledged</span>
-                            </li>
-                            <li><span>15</span><br><span class="text-muted light">days to Go</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    
-                </div>
-                
-                <div class="col-lg-6">
-                
-                    <h2 id="c_name">Jerry's Ice Cream Shop Campaign</h2>
-                    
-                    <h3><a href="" id="c_website">www.jerrysmission.com</a> <i style="margin-left: 10px; margin-right: 5px; font-size: 16px; max-height: 10px;" class="glyphicon text-success glyphicon-check"></i><span class="small text-muted light">hash verified</span></h3>
-                    
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
-                      </div>
-                    </div>
-                    
-                    <ul class="list-inline">
-                        <li><h1 style="margin-bottom: 10px;" id="c_backers">45</h1>Backers
-                        </li>
-                        <li><h1 id="c_amount">$16,500</h1>pledged of <span id="c_goal">$20,000</span>
-                        </li>
-                        <li><h1 id="c_days">13</h1>Days to Go
-                        </li>
-                    </ul>
-                    
-                    <br><br>
-                    
-                    <div class=" input-group input-group-lg">
-                        <input type="text" id="donate_amount" class="form-control" aria-describedby="sizing-addon1" style="width: 200px;" placeholder="Amount">
-                        
-                        <a href="" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
+                        </ul>-->
                     </div>
                 </div>
             </div>
 
         </div>
         <!-- /.container -->
-        
-        	<script type="text/javascript">
-		
-		check_for_id();
-		
-		</script>
 
     </div>
-    <!-- /.banner -->
+    <!-- /.intro-header -->
 
-	<a name="contact"></a>
+    <!-- Page Content -->
+
+	<a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">A Better Way To Crowd Fund</h2>
+                    <p class="lead">CrowdFundrr is a free to use, totally open-source crowd funding platform. We believe the internet should be a place where creativity can shine, which is why we are a <strong>no-fee, open-sourced crowd funding platform</strong>.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/ipad.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Built on <a href="http://www.ethereum.org">Ethereum</a></h2>
+                    <p class="lead">CrowdFundrr is entirely built on Ethereum, a decentralized open-source ecosystem that enables a more free and secure internet.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/eth.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Safe & Secure</h2>
+                    <p class="lead">CrowdFundrr uses robust and thoroughly tested open-source parts such as <a href="http://www.bootstrap.org">bootstrap</a>, <a href="http://www.ethereum.org">Ethereum</a>, and JQuery.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/open-source.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+	<a  name="new"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <!--<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Start A Campain</h2>
+                    <p class="lead">Crowdfunder is entirely built on Ethereum, a decentralized open-source ecosystem that enables a more free and secure internet.</p>
+                </div>-->
+                <div class="col-lg-5" style="min-height: 650px;">
+                    <h2>Start Your Campain</h2>
+                    <div class=" input-group input-group-lg">
+                   	 <p class="lead">Fill out your project details below and get crowd funding!</p>
+                    
+                		<input type="text" id="name" class="form-control" aria-describedby="sizing-addon1" placeholder="Campain Name">
+                        <br><br><br>
+                		<input type="text" id="website" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
+                        <br><br><br>
+                		<input type="text" id="timelimit" class="form-control" aria-describedby="sizing-addon1" placeholder="Timelimit (in Days)">
+                        <br><br><br>
+                		<input type="number" id="goal" class="form-control" aria-describedby="sizing-addon1" placeholder="Goal (i.e. 5000 ETH)">
+                        <br><br><br><br><br>
+                		<input type="number" id="address" class="form-control" aria-describedby="sizing-addon1" placeholder="Benificiary Address (leave blank for present)">
+                        <br><br><br><br>
+                        <a href="#" id="start_campain" class="btn btn-primary btn-lg" onClick="new_campaign();"><span class="network-name">Start your Campain!</span></a>
+                     </div>
+                </div>
+                
+                <div class="col-lg-5 col-lg-offset-2" style="min-height: 650px; padding-top: 40px;">
+                    <h2>Details</h2>
+                   	 <p class="lead"> • All funds are in ether denominations</p>
+                   	 <p class="lead"> • If your campaign goal is not reached by the alloted time period, all ether is returned to the respective doners</p>
+                   	 <p class="lead"> • If the campaign goal is reached, the funds will be avilable to the benificiary address</p>
+                   	 <p class="lead"> • Please provide a website url and campain name below 32 characters</p>
+                   	 <p class="lead"> • A campain ID will be provided after the campain is started, use this to promote your campain</p>
+                </div>
+                
+                <!--<div class="col-lg-5" style="min-height: 650px; padding-top: 40px;">
+                    <img class="img-responsive" src="img/girl1.png" style="margin-top: 40px;" alt="">
+                    <br>
+                   	 <p class="lead">Crowdfunder is also available on the Ethereum mobile app.</p>
+                </div>-->
+            </div>
+
+            <!--<div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Built on <a href="http://www.ethereum.org">Ethereum</a></h2>
+                    <p class="lead">Crowdfunder is entirely built on Ethereum, a decentralized open-source ecosystem that enables a more free and secure internet.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/eth.png" alt="">
+                </div>
+            </div>-->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+	<a  name="contact"></a>
     <div class="banner">
 
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Get Your Project Funded</h2>
+                    <h2>Connect With The Team</h2>
                 </div>
                 <div class="col-lg-6">
-                	<a href="index.html#new" class="btn btn-primary btn-default btn-lg">Start A Campaign</a>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/CrowdFundrr" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -232,6 +327,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
