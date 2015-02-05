@@ -76,7 +76,7 @@ function get_campaign()
   
   $("#c_name").html(get_camp[0]);
   $("#c_website").html(get_camp[1]);
-  $("#c_goal").html('$' + get_camp[3]);
+  $("#c_goal").html('$' + String(get_camp[3]));
   $("#c_backers").html(get_camp[4]);
   $("#c_amount").html('$' + get_camp[5]);
   $("#c_days").html('5'); //get_camp[6]
