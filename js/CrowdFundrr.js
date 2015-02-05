@@ -66,7 +66,7 @@ function get_campaign(id)
   {
   	c_id = id;
   }
-  alert('Yes' + String(get_url_id));
+  alert('Yes' + String(id));
   var get_camp = contract.call().getCampaign(c_id);
   
   // getCampaign(uint campaignID) returns (string32 r_name
