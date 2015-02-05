@@ -68,6 +68,7 @@ function get_campaign()
   var c_id = $('#campaign_id').val();
   alert(c_id);
   var get_camp = contract.call().getCampaign(c_id);
+  alert(get_camp);
   
   // getCampaign(uint campaignID) returns (string32 r_name
   //  , string32 r_website, address r_benificiary, uint r_fundingGoal
