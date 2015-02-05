@@ -8,7 +8,36 @@ contract CrowdFunding{function numCampaigns()constant returns(uint256 numCampaig
 99329342… :newCampaign
 c1cbbca7… :contribute
 cb5697f9… :campaigns
+
+// New Campaign Transaction
+// newCampaign(string32 name, string32 website, address beneficiary, uint goal, uint timelimit)
+// contract.transact().newCampaign("My Great Campaign"
+// , "mygreatcampaign.com", "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
+
+// Contribute to Campaign
+// contribute(uint campaignID)
+// contract.transact({value: 34598}).newCampaign();
+
+// Check Goal Reached
+// checkGoalReached(uint campaignID) returns (bool reached) 
+// contract.transact().checkGoalReached(campaignID);
+
+// Get Number of Campaigns
+// get_numCampaigns() returns (uint r_numCampaigns)
+// var get_numCampaigns = contract.call().get_numCampaigns();
+
+// Get Campaign Function (uint ID)
+var getCampaign = contract.call().getCampaign(34827423);
+
+var number = web3.eth.number;
+var info = web3.eth.block(number);
+
+// contract.transact({from: addr2, value: 100000}).join(addr1);
+
+
 */
+
+
 
 var eth = web3.eth;
 var contractAbi = [{"constant":true,"inputs":[],"name":"numCampaigns","outputs":[{"name":"numCampaigns","type":"uint256"}]},{"constant":false,"inputs":[],"name":"get_numCampaigns","outputs":[{"name":"r_numCampaigns","type":"uint256"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"checkGoalReached","outputs":[{"name":"reached","type":"bool"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"getCampain","outputs":[{"name":"r_name","type":"string32"},{"name":"r_website","type":"string32"},{"name":"r_benificiary","type":"address"},{"name":"r_fundingGoal","type":"uint256"},{"name":"r_numFunders","type":"uint256"},{"name":"r_amount","type":"uint256"},{"name":"r_timelimit","type":"uint256"}]},{"constant":false,"inputs":[{"name":"name","type":"string32"},{"name":"website","type":"string32"},{"name":"beneficiary","type":"address"},{"name":"goal","type":"uint256"},{"name":"timelimit","type":"uint256"}],"name":"newCampaign","outputs":[{"name":"campaignID","type":"uint256"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"contribute","outputs":[]},{"constant":true,"inputs":[],"name":"campaigns","outputs":[{"name":"campaigns","type":"mapping(uint256=>structCampaign)"}]}];
