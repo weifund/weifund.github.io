@@ -96,11 +96,13 @@ function get_campaign()
   $("#c_days").html('5'); //get_camp[6]
 }
 
-
-var get_url_id = getUrlParameter('id');
-
-if(String(get_url_id).length > 0)
+function check_for_id()
 {
-	var c_id = $('#campaign_id').val(String(get_url_id));
-	get_campaign();
+	var get_url_id = getUrlParameter('id');
+	
+	if(String(get_url_id).length > 0)
+	{
+		var c_id = $('#campaign_id').val(String(get_url_id));
+		get_campaign();
+	}
 }
