@@ -62,11 +62,10 @@ function new_campaign()
 function get_campaign(id)
 {
   var c_id = $('#campaign_id').val();
-  if(id != undefined && parseInt(id) >= 0)
+  if(id != undefined)
   {
   	c_id = id;
   }
-  alert('Yes' + String(id));
   var get_camp = contract.call().getCampaign(c_id);
   
   // getCampaign(uint campaignID) returns (string32 r_name
