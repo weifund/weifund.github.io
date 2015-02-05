@@ -41,7 +41,7 @@ var info = web3.eth.block(number);
 
 var eth = web3.eth;
 var contractAbi = [{"constant":true,"inputs":[],"name":"numCampaigns","outputs":[{"name":"numCampaigns","type":"uint256"}]},{"constant":false,"inputs":[],"name":"get_numCampaigns","outputs":[{"name":"r_numCampaigns","type":"uint256"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"checkGoalReached","outputs":[{"name":"reached","type":"bool"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"getCampain","outputs":[{"name":"r_name","type":"string32"},{"name":"r_website","type":"string32"},{"name":"r_benificiary","type":"address"},{"name":"r_fundingGoal","type":"uint256"},{"name":"r_numFunders","type":"uint256"},{"name":"r_amount","type":"uint256"},{"name":"r_timelimit","type":"uint256"}]},{"constant":false,"inputs":[{"name":"name","type":"string32"},{"name":"website","type":"string32"},{"name":"beneficiary","type":"address"},{"name":"goal","type":"uint256"},{"name":"timelimit","type":"uint256"}],"name":"newCampaign","outputs":[{"name":"campaignID","type":"uint256"}]},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"contribute","outputs":[]},{"constant":true,"inputs":[],"name":"campaigns","outputs":[{"name":"campaigns","type":"mapping(uint256=>structCampaign)"}]}];
-var contractAddr = "0x7c2bc06c1fc29e03257f3f7fdfda38483201b49a";
+var contractAddr = "0x34339abcdb5b448bd1a99f40e32b83ea2e9068e6";
 var contract = eth.contract(contractAddr, contractAbi);
 // New Campaign Transaction
 // newCampaign(string32 name, string32 website, address beneficiary, uint goal, uint timelimit)
