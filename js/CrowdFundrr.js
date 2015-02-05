@@ -73,16 +73,14 @@ function getUrlParameter(sParam)
     }
 }
 
-function get_campaign()
+function get_campaign(id)
 {
-  var camps = contract.call().get_numCampaigns();
-  alert(camps);
-  alert('Something!');
-  
   var c_id = $('#campaign_id').val();
-  alert(c_id);
+  if(id != undefined && parseInt(id) >= 0)
+  {
+  	c_id = id;
+  }
   var get_camp = contract.call().getCampaign(c_id);
-  alert(get_camp);
   
   // getCampaign(uint campaignID) returns (string32 r_name
   //  , string32 r_website, address r_benificiary, uint r_fundingGoal
