@@ -96,6 +96,7 @@ function get_campaign(id)
 
 function check_for_id()
 {
+	alert('get');
 	var get_url_id = $.QueryString["id"]; //getUrlParameter('id');
 	
 	if(parseInt(get_url_id) >= 0)
