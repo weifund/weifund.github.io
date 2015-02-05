@@ -98,9 +98,8 @@ function check_for_id()
 {
 	var get_url_id = getUrlParameter('id');
 	
-	if(String(get_url_id).length > 0)
+	if(parseInt(get_url_id) >= 0)
 	{
-		var c_id = $('#campaign_id').val(String(get_url_id));
-		get_campaign();
+		get_campaign(get_url_id);
 	}
 }
