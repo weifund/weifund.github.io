@@ -59,20 +59,6 @@ function new_campaign()
   alert(new_camp);
 }
 
-(function($) {
-    $.QueryString = (function(a) {
-        if (a == "") return {};
-        var b = {};
-        for (var i = 0; i < a.length; ++i)
-        {
-            var p=a[i].split('=');
-            if (p.length != 2) continue;
-            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-        }
-        return b;
-    })(window.location.search.substr(1).split('&'))
-})(jQuery);
-
 function get_campaign(id)
 {
   var c_id = $('#campaign_id').val();
@@ -96,8 +82,20 @@ function get_campaign(id)
 
 function check_for_id()
 {
-	alert('get');
-	var get_url_id = $.QueryString["id"]; //getUrlParameter('id');
+	var qs = (function(a) {
+	    if (a == "") return {};
+	    var b = {};
+	    for (var i = 0; i < a.length; ++i)
+	    {
+	        var p=a[i].split('=', 2);
+	        if (p.length == 1)
+	            b[p[0]] = "";
+	        else
+	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+	    }
+	    return b;
+	})(window.location.search.substr(1).split('&'));
+	var get_url_id = qs["id"]; //getUrlParameter('id');
 	
 	if(parseInt(get_url_id) >= 0)
 	{
