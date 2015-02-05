@@ -58,9 +58,10 @@ function new_campaign()
   var new_camp = contract.transact().newCampaign(c_name, c_website, "0x99704a2eb200abcc81b44e685f113bb83eaec43a", 50000, 5897359834);
   alert(new_camp);
 }
+
 function get_campaign()
 {
   var c_id = $('#campaign_id').val();
-  var getCampaign = contract.call().getCampaign(c_id);
+  var getCampaign = contract.call().getCampain(c_id);
   alert(getCampaign);
 }
