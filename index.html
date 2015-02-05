@@ -63,7 +63,7 @@
 		var c_beneficiary = $('#beneficiary').val();
 		var c_goal = $('#goal').val();
 		var c_timelimit = $('#timelimit').val();
-	 	var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit);
+	 	var new_camp = contract.transact().newCampaign(c_name, c_website, "0x99704a2eb200abcc81b44e685f113bb83eaec43a", 50000, 5897359834);
 		alert(new_camp);
 	}
     	
