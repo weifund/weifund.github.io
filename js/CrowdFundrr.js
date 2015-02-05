@@ -61,6 +61,9 @@ function new_campaign()
 
 function get_campaign()
 {
+  var get_numCampaigns = contract.call().get_numCampaigns();
+  alert(get_numCampaigns);
+  
   var c_id = $('#campaign_id').val();
   var getCampaign = contract.call().getCampaign(c_id);
   alert(getCampaign);
