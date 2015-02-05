@@ -96,7 +96,7 @@ function get_campaign(id)
 
 function check_for_id()
 {
-	var get_url_id = getUrlParameter('id');
+	var get_url_id = 1; //getUrlParameter('id');
 	
 	if(parseInt(get_url_id) >= 0)
 	{
