@@ -95,7 +95,9 @@ function check_for_id()
 	    }
 	    return b;
 	})(window.location.search.substr(1).split('&'));
+	
 	var get_url_id = qs["id"]; //getUrlParameter('id');
+	alert(get_url_id);
 	
 	if(parseInt(get_url_id) >= 0)
 	{
