@@ -58,11 +58,11 @@
 	
 	function new_campaign()
 	{
-		var c_name = $('#c_name').val();
-		var c_website = $('#c_website').val();
-		var c_beneficiary = $('#c_beneficiary').val();
-		var c_goal = $('#c_goal').val();
-		var c_timelimit = $('#c_timelimit').val();
+		var c_name = $('#name').val();
+		var c_website = $('#website').val();
+		var c_beneficiary = $('#beneficiary').val();
+		var c_goal = $('#goal').val();
+		var c_timelimit = $('#timelimit').val();
 	 	var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit);
 		alert(new_camp);
 	}
