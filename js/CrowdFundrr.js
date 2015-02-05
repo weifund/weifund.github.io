@@ -48,9 +48,6 @@ var contract = eth.contract(contractAddr, contractAbi);
 // contract.transact().newCampaign("My Great Campaign"
 // , "mygreatcampaign.com", "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
 
-var camps = contract.call().get_numCampaigns();
-alert(camps);
-
 function new_campaign()
 {
   var c_name = $('#name').val();
@@ -70,6 +67,6 @@ function get_campaign()
   
   var c_id = $('#campaign_id').val();
   alert(c_id);
-  var getCampaign = contract.call().getCampaign(c_id);
-  alert(getCampaign);
+  var get_camp = contract.call().getCampaign(c_id);
+  alert(get_camp);
 }
