@@ -61,6 +61,7 @@ function new_campaign()
 
 function get_campaign()
 {
+  alert('Something!');
   var get_numCampaigns = contract.call().get_numCampaigns();
   alert(get_numCampaigns);
   
