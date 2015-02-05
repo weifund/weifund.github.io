@@ -59,19 +59,19 @@ function new_campaign()
   alert(new_camp);
 }
 
-function getUrlParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
+(function($) {
+    $.QueryString = (function(a) {
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i)
         {
-            return sParameterName[1];
+            var p=a[i].split('=');
+            if (p.length != 2) continue;
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
         }
-    }
-}
+        return b;
+    })(window.location.search.substr(1).split('&'))
+})(jQuery);
 
 function get_campaign(id)
 {
@@ -96,7 +96,7 @@ function get_campaign(id)
 
 function check_for_id()
 {
-	var get_url_id = 1; //getUrlParameter('id');
+	var get_url_id = $.QueryString["id"]; //getUrlParameter('id');
 	
 	if(parseInt(get_url_id) >= 0)
 	{
