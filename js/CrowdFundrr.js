@@ -68,5 +68,18 @@ function get_campaign()
   var c_id = $('#campaign_id').val();
   alert(c_id);
   var get_camp = contract.call().getCampaign(c_id);
-  alert(get_camp);
+  
+  // getCampaign(uint campaignID) returns (string32 r_name
+  //  , string32 r_website, address r_benificiary, uint r_fundingGoal
+  //  , uint r_numFunders, uint r_amount, uint r_timelimit)
+  
+  if(String(get_camp[0]).length > 0 && String(get_camp[2]).length > 0)
+  {
+    $("#c_name").html(get_camp[0]);
+    $("#c_website").html(get_camp[1]);
+    $("#c_goal").html('$' + get_camp[3]);
+    $("#c_backers").html(get_camp[4]);
+    $("#c_amount").html('$' + get_camp[5]);
+    $("#c_days").html('5'); //get_camp[6]
+  }
 }
