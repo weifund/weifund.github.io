@@ -28,6 +28,42 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    
+    <script type="text/javascript" src="js/bignumber.js/bignumber.min.js"></script>
+    <script type="text/javascript" src="ethereum.js"></script>
+    <!--<script type="text/javascript" src="MooTools-Core-1.5.1.js"></script>-->
+    
+    <!-- Contract Code Basics
+    	var eth = web3.eth;
+	var contractAbi = [];
+	var contractAddr = "0x6465940d1a1a7901f89476ff87a945e0fb1d07db";
+	var contract = eth.contract(contractAddr, contractAbi);
+	
+	// New Campaign Transaction
+	// newCampaign(string32 name, string32 website, address beneficiary, uint goal, uint timelimit)
+	// contract.transact().newCampaign("My Great Campaign"
+	// , "mygreatcampaign.com", "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
+	
+	// Contribute to Campaign
+	// contribute(uint campaignID)
+	// contract.transact({value: 34598}).newCampaign();
+	
+	// Check Goal Reached
+	// checkGoalReached(uint campaignID) returns (bool reached) 
+	// contract.transact().checkGoalReached(campaignID);
+	
+	// Get Number of Campaigns
+	// get_numCampaigns() returns (uint r_numCampaigns)
+	// var get_numCampaigns = contract.call().get_numCampaigns();
+	
+	// Get Campaign Function (uint ID)
+	var getCampaign = contract.call().getCampaign(34827423);
+
+	var number = web3.eth.number;
+	var info = web3.eth.block(number);
+	
+	// contract.transact({from: addr2, value: 100000}).join(addr1);-->
 
 </head>
 
