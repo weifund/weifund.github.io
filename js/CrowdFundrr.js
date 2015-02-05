@@ -62,6 +62,6 @@ function new_campaign()
 function get_campaign()
 {
   var c_id = $('#campaign_id').val();
-  var getCampaign = contract.call().getCampain(2);
+  var getCampaign = contract.call().getCampaign(c_id);
   alert(getCampaign);
 }
