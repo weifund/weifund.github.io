@@ -140,6 +140,8 @@ function get_campaign(id)
   var progress = (parseInt(get_camp[5])/parseInt(get_camp[3])) * 100;
   $('#c_progress').css('width', progress+'%').attr('aria-valuenow', progress);
   
+  alert(progress);
+  
   hash_verified(String(get_camp[7]), get_camp[1]);
 }
 
