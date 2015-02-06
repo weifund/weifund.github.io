@@ -105,6 +105,8 @@ function hash_verified(owner_addr, website_url)
 		$.get(website_url, function(data) {
 		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
 		   
+		   alert(owner_address);
+		   
 		   if(owner_addr == owner_address)
 		   {
 		   	$('#is_verified').empty();
