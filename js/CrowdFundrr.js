@@ -59,7 +59,7 @@ function new_campaign()
   var c_website = $('#website').val();
   var c_beneficiary = $('#address').val();
   var c_goal = $('#goal').val();
-  var c_timelimit = $('#timelimit').val();
+  var c_timelimit = 124237892; //$('#timelimit').val();
   
   var accounts = web3.eth.accounts;
   
@@ -68,13 +68,26 @@ function new_campaign()
         c_beneficiary = accounts[0];
   }
   
-  var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, 124237892); //parseInt(c_timelimit)
+  if(String(c_name) == "" || c_goal <= 0 || c_timelimit <= 0)
+  {
+  	return false;
+  }
+  
+  var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit); //parseInt(c_timelimit)
   var get_camp_id = contract.call().getUserLatest(accounts[0]);
   var get_camp = contract.call().getCampaign(get_camp_id);
+  var new_camp_url = "http://www.crowdfundrr.github.io/?id=" + String(get_camp_id);
   
-  alert(get_camp);
+  $("#new_campaign_wrapper").hide();
   
-  //alert(new_camp);
+  $("#new_campaign_id").html(String(get_camp_id));
+  $("#new_campaign_name").html(String(get_camp[0]));
+  $("#new_campaign_name").href(new_camp_url);
+  $("#new_campaign_url").html(new_camp_url);
+  $("#new_campaign_hash").value(String('<meta name="hash_verifier" content="' + String(get_camp[9]) + '">'));
+  $("#new_campaign_goto").href(new_camp_url);
+  
+  $("#campaign_success_wrapper").show();
 }
 
 function get_campaign(id)
