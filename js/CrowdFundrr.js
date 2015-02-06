@@ -67,7 +67,7 @@ function new_campaign()
         c_beneficiary = accounts[0];
   }
   
-  var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, 50000, 124237892); //parseInt(c_timelimit)
+  var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, c_goal, 124237892); //parseInt(c_timelimit)
   //alert(new_camp);
 }
 
