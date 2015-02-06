@@ -100,6 +100,8 @@ function hash_verified(owner_addr, website_url)
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
+		try
+		{
 		$.get(website_url, function(data) {
 		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
 		   
@@ -109,6 +111,8 @@ function hash_verified(owner_addr, website_url)
 			$('#is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> <span class="text-success">Hash Verified</span>');
 		   }
 		});
+		}
+		catch(err){}
 	}
 }
 
