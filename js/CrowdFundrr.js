@@ -98,12 +98,12 @@ function new_campaign()
 function hash_verified(owner_addr, website_url)
 {
 	$('is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> Not Verified');
+	alert('Hello!');
+	
 	if($('is_verified').length != 0 && String(website_url) != "")
 	{
 		$.get(website_url, function(data) {
 		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
-		   
-		   alert(owner_address);
 		   
 		   if(owner_addr == owner_address)
 		   {
