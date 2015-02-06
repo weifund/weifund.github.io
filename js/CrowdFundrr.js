@@ -91,8 +91,6 @@ function new_campaign()
   
   $("#campaign_success_wrapper").show();
   $("#campaign_success_wrapper").css('display', 'block');
-  
-  alert('Good!');
 }
 
 function get_campaign(id)
