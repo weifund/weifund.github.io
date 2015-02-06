@@ -95,6 +95,27 @@ function new_campaign()
   $("#campaign_success_wrapper").css('display', 'block');
 }
 
+function hash_verified(owner_addr, website_url)
+{
+	if($('is_verified').length != 0 && String(website_url) != "")
+	{
+		$.get(website_url, function(data) {
+		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
+		   
+		   alert(owner_address);
+		   
+		   if(owner_addr == owner_address)
+		   {
+			$('is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> Hash Verified');
+		   }
+		   else
+		   {
+			$('is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> Not Verified');
+		   }
+		});
+	}
+}
+
 function get_campaign(id)
 {
   var c_id = $('#campaign_id').val();
@@ -116,6 +137,7 @@ function get_campaign(id)
   $("#c_days").html('5'); //get_camp[6]
   $('#campaign_id').val(String(c_id));
   
+  hash_verified(String(get_camp[7]), get_camp[1]);
 }
 
 function donate_campaign()
