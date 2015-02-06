@@ -77,7 +77,7 @@ function new_campaign()
   var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit); //parseInt(c_timelimit)
   var get_camp_id = contract.call().getUserLatest(accounts[0]);
   var get_camp = contract.call().getCampaign(get_camp_id);
-  var new_camp_url = "http://www.crowdfundrr.github.io/?id=" + String(get_camp_id);
+  var new_camp_url = "http:/crowdfundrr.github.io/?id=" + String(get_camp_id);
   
   $("#new_campaign_wrapper").hide();
   
