@@ -65,7 +65,7 @@ function new_campaign()
   	c_beneficiary = eth.accounts[0];
   }
   
-  var new_camp = contract.transact().newCampaign(c_name, c_website, String(c_beneficiary), parseInt(c_goal), parseInt(c_timelimit));
+  var new_camp = contract.transact().newCampaign(c_name, c_website, String(c_beneficiary), parseInt(c_goal), 776234786234); //parseInt(c_timelimit)
   alert(new_camp);
 }
 
