@@ -137,10 +137,11 @@ function get_campaign(id)
   $("#c_days").html('5'); //get_camp[6]
   $('#campaign_id').val(String(c_id));
   
-  var progress = (parseInt(get_camp[5])/parseInt(get_camp[3])) * 100;
-  $('#c_progress').css('width', progress+'%').attr('aria-valuenow', progress);
+  var progress = (get_camp[5]/get_camp[3]) * 100;
   
   alert(progress);
+  
+  $('#c_progress').css('width', progress+'%').attr('aria-valuenow', progress);
   
   hash_verified(String(get_camp[7]), get_camp[1]);
 }
