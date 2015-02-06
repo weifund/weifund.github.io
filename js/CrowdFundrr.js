@@ -103,6 +103,7 @@ function donate_campaign()
 	if(parseInt(donate_amount) > 0)
 	{
 		contract.transact({value: parseInt(donate_amount)}).contribute(parseInt(camp_id));
+		get_campaign(camp_id);
 	}
 }
 
