@@ -97,8 +97,7 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
-	$('#is_verified').addClass("text-danger");
-	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> Not Verified');
+	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
 		$.get(website_url, function(data) {
@@ -106,9 +105,8 @@ function hash_verified(owner_addr, website_url)
 		   
 		   if(owner_addr == owner_address)
 		   {
-			$('#is_verified').removeClass("text-danger");
 		   	$('#is_verified').empty();
-			$('#is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> Hash Verified');
+			$('#is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> <span class="text-success">Hash Verified</span>');
 		   }
 		});
 	}
