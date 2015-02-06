@@ -97,7 +97,8 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
-	$('is_verified').append('<i class="text-danger glyphicon glyphicon-remove"></i> Not Verified');
+	$('is_verified').append('<i class="text-danger glyphicon glyphicon-remove"></i>');
+	$('is_verified').append('<span>Not Verified</span>');
 	if($('is_verified').length != 0 && String(website_url) != "")
 	{
 		$.get(website_url, function(data) {
