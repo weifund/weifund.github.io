@@ -56,7 +56,7 @@ function new_campaign()
 {
   var c_name = $('#name').val();
   var c_website = $('#website').val();
-  var c_beneficiary = $('#beneficiary').val();
+  var c_beneficiary = $('#address').val();
   var c_goal = $('#goal').val();
   var c_timelimit = $('#timelimit').val();
   
@@ -64,13 +64,10 @@ function new_campaign()
   if(String(c_beneficiary) == "")
   {
   	var accounts = web3.eth.accounts;
-  	//c_beneficiary = accounts[0];
-  	alert(accounts[0]);
+        c_beneficiary = accounts[0];
   }
   
-  //contract.transact().newCampaign(String(c_name), String(c_website), c_beneficiary, 50000, 4232408243);
-  
-  //var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, 50000, 124237892); //parseInt(c_timelimit)
+  var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, 50000, 124237892); //parseInt(c_timelimit)
   //alert(new_camp);
 }
 
