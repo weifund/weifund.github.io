@@ -80,12 +80,14 @@ function new_campaign()
   
   $("#new_campaign_wrapper").hide();
   
+  //.attr("href", "http://www.google.com/")
+  
   $("#new_campaign_id").html(String(get_camp_id));
   $("#new_campaign_name").html(String(get_camp[0]));
-  $("#new_campaign_name").href(new_camp_url);
+  $("#new_campaign_name").attr("href", new_camp_url);
   $("#new_campaign_url").html(new_camp_url);
   $("#new_campaign_hash").value(String('<meta name="hash_verifier" content="' + String(get_camp[9]) + '">'));
-  $("#new_campaign_goto").href(new_camp_url);
+  $("#new_campaign_goto").attr("href", new_camp_url);
   
   $("#campaign_success_wrapper").show();
 }
