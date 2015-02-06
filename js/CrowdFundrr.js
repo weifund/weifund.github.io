@@ -101,8 +101,6 @@ function hash_verified(owner_addr, website_url)
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
 		alert('Still Good!');
-		try
-		{
 		$.get(website_url, function(data) {
 		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
 		   
@@ -114,8 +112,6 @@ function hash_verified(owner_addr, website_url)
 			$('#is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> <span class="text-success">Hash Verified</span>');
 		   }
 		});
-		}
-		catch(err){}
 	}
 }
 
