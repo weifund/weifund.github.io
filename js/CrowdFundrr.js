@@ -77,7 +77,7 @@ function new_campaign()
   var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit); //parseInt(c_timelimit)
   var get_camp_id = contract.call().getUserLatest(accounts[0]);
   var get_camp = contract.call().getCampaign(get_camp_id);
-  var new_camp_url = "http:/crowdfundrr.github.io/?id=" + String(get_camp_id);
+  var new_camp_url = "http://crowdfundrr.github.io/?id=" + String(get_camp_id);
   
   $("#new_campaign_wrapper").hide();
   
@@ -87,6 +87,7 @@ function new_campaign()
   $("#new_campaign_name").html(String(get_camp[0]));
   $("#new_campaign_name").attr("href", new_camp_url);
   $("#new_campaign_url").html(new_camp_url);
+  $("#new_campaign_url").attr("href", new_camp_url);
   $("#new_campaign_hash").val(String('<meta name="hash_verifier" content="' + String(accounts[0]) + '">'));
   $("#new_campaign_goto").attr("href", new_camp_url);
   
