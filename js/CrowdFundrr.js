@@ -60,6 +60,11 @@ function new_campaign()
   var c_goal = $('#goal').val();
   var c_timelimit = $('#timelimit').val();
   
+  
+  	var accounts = web3.eth.accounts;
+  	//c_beneficiary = accounts[0];
+  	alert(accounts);
+  
   if(String(c_beneficiary).length == 0)
   {
   	var accounts = web3.eth.accounts;
