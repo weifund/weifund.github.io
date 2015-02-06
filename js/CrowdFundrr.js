@@ -70,8 +70,9 @@ function new_campaign()
   
   var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, 124237892); //parseInt(c_timelimit)
   var get_camp_id = contract.call().getUserLatest(accounts[0]);
+  var get_camp = get_campaign(get_camp_id);
   
-  alert(get_camp_id);
+  alert(get_camp);
   
   //alert(new_camp);
 }
