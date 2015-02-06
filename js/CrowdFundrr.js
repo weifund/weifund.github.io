@@ -90,6 +90,7 @@ function new_campaign()
   $("#new_campaign_goto").attr("href", new_camp_url);
   
   $("#campaign_success_wrapper").css('display', 'block');
+  $("#campaign_success_wrapper").show();
 }
 
 function get_campaign(id)
