@@ -89,7 +89,7 @@ function new_campaign()
   $("#new_campaign_hash").val(String('&#60;meta name=&quot;hash_verifier&quot; content=&quot;' + String(get_camp[9]) + '&quot;&#62;'));
   $("#new_campaign_goto").attr("href", new_camp_url);
   
-  $("#campaign_success_wrapper").hide();
+  $("#campaign_success_wrapper").css('display', 'show');
 }
 
 function get_campaign(id)
