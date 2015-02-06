@@ -33,6 +33,26 @@
     <script type="text/javascript" src="js/bignumber.min.js"></script>
     <script type="text/javascript" src="js/ethereum.js"></script>
     <script type="text/javascript" src="js/CrowdFundrr.js"></script>
+    
+    var qs = (function(a) {
+	    if (a == "") return {};
+	    var b = {};
+	    for (var i = 0; i < a.length; ++i)
+	    {
+	        var p=a[i].split('=', 2);
+	        if (p.length == 1)
+	            b[p[0]] = "";
+	        else
+	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+	    }
+	    return b;
+	})(window.location.search.substr(1).split('&'));
+	
+    if(qs["id"] != undefined)
+    {
+    	window.location.replace("tracker.html?id=" + String(qs["id"]));
+    }
+    
     <!-- Contract Code Basics
     	var eth = web3.eth;
 	var contractAbi = [];
