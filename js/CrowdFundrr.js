@@ -64,9 +64,10 @@ function new_campaign()
   {
   	var accounts = web3.eth.accounts;
   	c_beneficiary = accounts[0];
+  	alert(c_beneficiary);
   }
   
-  contract.transact().newCampaign(String(c_name), String(c_website), "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
+  contract.transact().newCampaign(String(c_name), String(c_website), c_beneficiary, 50000, 4232408243);
   
   //var new_camp = contract.transact().newCampaign(c_name, c_website, c_beneficiary, 50000, 124237892); //parseInt(c_timelimit)
   //alert(new_camp);
