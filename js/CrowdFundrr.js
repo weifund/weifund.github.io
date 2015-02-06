@@ -100,6 +100,7 @@ function hash_verified(owner_addr, website_url)
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
+		alert('Still Good!');
 		try
 		{
 		$.get(website_url, function(data) {
