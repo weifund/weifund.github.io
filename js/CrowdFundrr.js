@@ -61,15 +61,11 @@ function new_campaign()
   var c_timelimit = $('#timelimit').val();
   
   
-  	var accounts = web3.eth.accounts;
-  	//c_beneficiary = accounts[0];
-  	alert(accounts);
-  
-  if(String(c_beneficiary).length == 0)
+  if(String(c_beneficiary) == "")
   {
   	var accounts = web3.eth.accounts;
   	//c_beneficiary = accounts[0];
-  	alert(accounts);
+  	alert(accounts[0]);
   }
   
   //contract.transact().newCampaign(String(c_name), String(c_website), c_beneficiary, 50000, 4232408243);
