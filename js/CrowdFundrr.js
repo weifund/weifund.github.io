@@ -116,7 +116,6 @@ function hash_verified(owner_addr, website_url)
 	    	alert(data);
 	        // ...
 	    };
-	    request.onreadystatechange = handler;
 	    request.send();
 	}
 	
