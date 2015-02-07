@@ -89,7 +89,7 @@ function loadCampaign(cid)
 	// Returns Campaign OBJ
 	var raw_campaign = contract.call().getNumCampaigns();
 	
-	if(String(raw_campaign[0]) != "")
+	if(raw_campaign[0] != undefined && String(raw_campaign[0]) != "")
 	{
 		var progress = (parseInt(raw_campaign[5]) / parseInt(raw_campaign[3])) * 100;
 		var days_to_go = days_between(new Date(), new Date(parseInt(raw_campaign[6])));
