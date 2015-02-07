@@ -59,11 +59,11 @@ function days_between(date1, date2)
 	return Math.round(Math.abs((date2.getTime() - date1.getTime())/(oneDay)));
 }
 
-function make_into_url(string_url)
-{
-	var reg = /^((http|https|ftp)://)/;
-	var new_url = !reg.test(String(string_url)) ? "http://" + String(string_url) : String(string_url);
-	return new_url;
+function addhttp($url) {
+    if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
+        $url = "http://" . $url;
+    }
+    return $url;
 }
 
 function cleanURL(string_url)
@@ -97,7 +97,7 @@ function loadCampaign(cid)
 		var return_obj = {
 			"id": cid
 			, "name": String(raw_campaign[0])
-			, "website": make_into_url(raw_campaign[1])
+			, "website": addhttp(raw_campaign[1])
 			, "benificiary": String(raw_campaign[2])
 			, "fundingGoal": parseInt(raw_campaign[3])
 			, "goal": parseInt(raw_campaign[3])
