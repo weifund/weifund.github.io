@@ -100,7 +100,7 @@ function hash_verified(owner_addr, website_url)
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
-		$.get("http://www.cbc.ca/cmlink/rss-topstories", function(data, status) {
+		$.get("http://www.html5rocks.com/en/tutorials/file/xhr2/", function(data, status) {
 		   alert(status);
 		   var owner_address = $(data).find('meta[name=hash_verify]').attr("content");
 		   
