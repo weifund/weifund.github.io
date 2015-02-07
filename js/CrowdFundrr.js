@@ -110,7 +110,7 @@ function hash_verified(owner_addr, website_url)
 	    return xhr;
 	}
 	
-	var request = createCORSRequest("get", "http://www.stackoverflow.com/");
+	var request = createCORSRequest("get", "http://www.kipoh.com/hash_verify.php");
 	if (request){
 	    request.onload = function(data) {
 	    	alert(data);
