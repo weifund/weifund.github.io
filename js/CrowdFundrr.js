@@ -131,7 +131,7 @@ function get_campaign(id)
   var stripped_website_url = String(get_camp[1]).replace(/.*?:\/\//g, "");
   
   $("#c_name").html(get_camp[0]);
-  $("#c_website").attr('href', stripped_website_url);
+  $("#c_website").attr('href', get_camp[1]);
   $("#c_website").html(stripped_website_url);
   $("#c_goal").html('$' + String(get_camp[3]));
   $("#c_backers").html(String(get_camp[4]));
