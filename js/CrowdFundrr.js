@@ -86,8 +86,6 @@ function new_campaign()
   
   $("#new_campaign_wrapper").hide();
   
-  alert();
-  
   //.attr("href", "http://www.google.com/")
   
   $("#new_campaign_id").html(String(get_camp_id));
@@ -125,9 +123,6 @@ function hash_verified(owner_addr, website_url)
 function days_between(date1, date2) 
 {
 	var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-	
-	alert(date2.getTime() + ' - ' + date1.getTime())
-	
 	return Math.round(Math.abs((date2.getTime() - date1.getTime())/(oneDay)));
 }
 
