@@ -64,6 +64,11 @@ function new_campaign()
   
   var accounts = web3.eth.accounts;
   
+  //var myDate="26-02-2012";
+  //myDate=myDate.split("-");
+  //var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2];
+  c_timelimit = new Date(String($('#timelimit').val())).getTime();
+  
   if(String(c_beneficiary) == "")
   {
         c_beneficiary = accounts[0];
@@ -80,6 +85,8 @@ function new_campaign()
   var new_camp_url = "http://crowdfundrr.github.io/?id=" + String(get_camp_id);
   
   $("#new_campaign_wrapper").hide();
+  
+  alert();
   
   //.attr("href", "http://www.google.com/")
   
