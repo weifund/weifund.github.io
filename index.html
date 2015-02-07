@@ -251,7 +251,7 @@
                             <br><br><br>
                             <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
                             <br><br><br>
-                            <input type="text" id="timelimit" data-provide="datepicker" class="form-control" aria-describedby="sizing-addon1" placeholder="Timelimit">
+                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" placeholder="Timelimit">
                             <br><br><br>
                             <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Goal (i.e. 5000 Finney)">
                             <br><br><br><br><br>
@@ -378,6 +378,12 @@
             </div>
         </div>
     </footer>
+    
+    <script type="text/javascript">
+    	$('.datepicker').datepicker({
+	    startDate: '+15d'
+	});
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
