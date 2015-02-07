@@ -125,7 +125,7 @@ function hash_verified(owner_addr, website_url)
 function days_between(date1, date2) 
 {
 	var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-	return Math.round(Math.abs((date1.getTime() - date2.getTime())/(oneDay)));
+	return Math.round(Math.abs((date2.getTime() - date1.getTime())/(oneDay)));
 }
 
 function get_campaign(id)
