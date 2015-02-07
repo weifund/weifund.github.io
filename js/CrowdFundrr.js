@@ -156,7 +156,7 @@ function new_campaign()
 	{
 		$("#new_campaign_wrapper").hide();
 		
-		$("#new_campaign_id").html(campaign['id']);
+		$("#new_campaign_id").html(String(campaign['id']));
 		$("#new_campaign_name").html(campaign['name']);
 		$("#new_campaign_name").attr("href", campaign['url']);
 		$("#new_campaign_url").html(campaign['url']);
