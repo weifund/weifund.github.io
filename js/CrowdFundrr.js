@@ -97,30 +97,14 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
-	$.get("http://www.kipoh.com/hash_verify.php", function(data){
-	  alert("Data: " + data);
-	});
 	
-	function createCORSRequest(method, url){
-	    var xhr = new XMLHttpRequest();
-	    if ("withCredentials" in xhr){
-	        xhr.open(method, url, true);
-	    } else if (typeof XDomainRequest != "undefined"){
-	        xhr = new XDomainRequest();
-	        xhr.open(method, url);
-	    } else {
-	        xhr = null;
-	    }
-	    return xhr;
-	}
-	
-	var request = createCORSRequest("get", "http://www.kipoh.com/hash_verify.php");
-	if (request){
-	    request.onload = function(data, sdata) {
-	    	alert(sdata);
-	    };
-	    request.send();
-	}
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'http://www.kipoh.com/hash_verify.php');
+	xhr.onreadystatechange = function(e) {
+	  if(xhr.readyState === 4)
+	    alert(xhr.responseText);
+	};
+	xhr.send();
 	
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
