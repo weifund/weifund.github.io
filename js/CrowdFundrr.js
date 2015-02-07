@@ -97,6 +97,14 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
+	$.ajax({
+		url: "http://kipoh.com",
+		xhrFields: {
+			withCredentials: true
+		}
+		, success: function(data){alert(data);}
+	});
+	
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
