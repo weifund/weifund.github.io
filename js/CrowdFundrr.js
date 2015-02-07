@@ -112,9 +112,8 @@ function hash_verified(owner_addr, website_url)
 	
 	var request = createCORSRequest("get", "http://www.kipoh.com/hash_verify.php");
 	if (request){
-	    request.onload = function(data) {
-	    	alert(data);
-	        // ...
+	    request.onload = function(data, sdata) {
+	    	alert(sdata);
 	    };
 	    request.send();
 	}
