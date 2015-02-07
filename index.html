@@ -251,7 +251,7 @@
                             <br><br><br>
                             <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
                             <br><br><br>
-                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" placeholder="Timelimit">
+                            <input type="text" id="timelimit"  class="datepicker" placeholder="Timelimit">
                             <br><br><br>
                             <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Goal (i.e. 5000 Finney)">
                             <br><br><br><br><br>
@@ -302,6 +302,12 @@
                    	 <p class="lead">Crowdfunder is also available on the Ethereum mobile app.</p>
                 </div>-->
             </div>
+    
+	    <script type="text/javascript">
+	    	$('.datepicker').datepicker({
+		    startDate: '+15d'
+		});
+	    </script>
 
             <!--<div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
@@ -384,12 +390,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    
-    <script type="text/javascript">
-    	$('.datepicker').datepicker({
-	    startDate: '+15d'
-	});
-    </script>
 
 </body>
 
