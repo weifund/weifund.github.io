@@ -97,8 +97,7 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
-	
-	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
+	/*$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
 		$.get("http://www.html5rocks.com/en/tutorials/file/xhr2/", function(data, status) {
@@ -113,7 +112,7 @@ function hash_verified(owner_addr, website_url)
 			$('#is_verified').html('<i class="text-success glyphicon glyphicon-check"></i> <span class="text-success">Hash Verified</span>');
 		   }
 		});
-	}
+	}*/
 }
 
 function get_campaign(id)
