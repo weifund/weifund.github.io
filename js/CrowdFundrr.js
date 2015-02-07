@@ -87,7 +87,7 @@ function loadCampaign(cid)
 	r_category = c.category;*/
 		
 	// Returns Campaign OBJ
-	var raw_campaign = contract.call().getNumCampaigns();
+	var raw_campaign = contract.call().getCampaign(parseInt(cid));
 	
 	if(raw_campaign[0] != undefined && String(raw_campaign[0]) != "")
 	{
@@ -134,13 +134,23 @@ function new_campaign()
 		c_beneficiary = accounts[0];
 	}
 	
+	alert(accounts);
+	alert(c_timelimit);
+	alert(c_category);
+	alert(c_goal);
+	
 	if(String(c_name) == "" || c_goal <= 0 || c_timelimit <= 0){
 		return false;
 	}
 	
 	var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category); //parseInt(c_timelimit)
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
+	
+	alert(get_camp_id);
+	
 	var campaign = loadCampaign(get_camp_id);
+	
+	alert(JSON.stringify(campaign));
 	
 	if(campaign !== false)
 	{
