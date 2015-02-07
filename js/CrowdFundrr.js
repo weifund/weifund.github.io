@@ -59,11 +59,11 @@ function days_between(date1, date2)
 	return Math.round(Math.abs((date2.getTime() - date1.getTime())/(oneDay)));
 }
 
-function addhttp($url) {
-    if (!preg_match("~^(?:f|ht)tps?://~i", $url)) {
-        $url = "http://" . $url;
-    }
-    return $url;
+function addhttp(url) {
+   if (!/^(f|ht)tps?:\/\//i.test(String(url))) {
+      url = "http://" + String(url);
+   }
+   return url;
 }
 
 function cleanURL(string_url)
