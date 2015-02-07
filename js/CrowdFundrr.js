@@ -122,6 +122,14 @@ function hash_verified(owner_addr, website_url)
 	}*/
 }
 
+function days_between(date1, date2) 
+{
+	var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+	var firstDate = new Date(2008,01,12);
+	var secondDate = new Date(2008,01,22);
+	return Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+}
+
 function get_campaign(id)
 {
   var c_id = $('#campaign_id').val();
@@ -143,7 +151,7 @@ function get_campaign(id)
   $("#c_goal").html('$' + String(get_camp[3]));
   $("#c_backers").html(String(get_camp[4]));
   $("#c_amount").html('$' + String(get_camp[5]));
-  $("#c_days").html('5'); //get_camp[6]
+  $("#c_days").html(days_between(new Date(), get_camp[6])); //get_camp[6]
   $('#campaign_id').val(String(c_id));
   
   var progress = (get_camp[5]/get_camp[3]) * 100;
