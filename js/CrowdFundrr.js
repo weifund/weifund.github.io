@@ -201,7 +201,7 @@ function discover(category, load_max)
 		load_max = 6;
 	}
 	
-	var columns = [$('#discover_col_1'), $('#discover_col_2'), $('#discover_col_3'), $('#discover_col_4')];
+	var columns = [$('#discover_1'), $('#discover_2'), $('#discover_3'), $('#discover_4')];
 	
 	var total_campaigns = contract.call().getNumCampaigns();
 	var category_count = 0;
