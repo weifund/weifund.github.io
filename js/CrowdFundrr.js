@@ -197,9 +197,11 @@ function discover(category, load_max)
 	var category_count = 0;
 	var column_count = 0;
 	
-	for(var cid = total_campaigns; cid >= 0; cid--)
+	for(var cid = parseInt(total_campaigns - 1); cid >= 0; cid--)
 	{
 		var campaign = loadCampaign(cid);
+		
+		alert(JSON.stringify(campaign));
 		
 		if(category_count < load_max && campaign !== false)
 		{
