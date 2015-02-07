@@ -149,7 +149,7 @@ function get_campaign(id)
   $("#c_goal").html('$' + String(get_camp[3]));
   $("#c_backers").html(String(get_camp[4]));
   $("#c_amount").html('$' + String(get_camp[5]));
-  $("#c_days").html(days_between(new Date(), new Date(get_camp[6])*1000)); //get_camp[6]
+  $("#c_days").html(days_between(new Date(), new Date(parseInt(get_camp[6])*1000))); //get_camp[6]
   $('#campaign_id').val(String(c_id));
   
   var progress = (get_camp[5]/get_camp[3]) * 100;
