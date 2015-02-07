@@ -113,7 +113,7 @@
                         <a href="discover.html">Discover</a>
                     </li>
                     <li>
-                        <a href="tracker.html">Donate</a>
+                        <a href="index.html#new">Start</a>
                     </li>
                     <li>
                         <a href="index.html#services">About</a>
@@ -244,20 +244,56 @@
                 </div>-->
                 <div class="col-lg-5" style="min-height: 650px;">
                 
-                	<div id="new_campaign_wrapper">
+                	<div id="new_campaign_wrapper" style="margin-top: 60px;">
                         <h2>Start Your Campain</h2>
                         <div class=" input-group input-group-lg">
                          <p class="lead">Fill out your project details below and get crowd funding!</p>
+                         
+                         	<!--
+                              
+                      <a href="#" class="btn btn-default">Small Buisness</a>
+                      <a href="#" class="btn btn-default">Technology</a>
+                      <a href="#" class="btn btn-default">Music</a>
+                      <a href="#" class="btn btn-default">Arts</a>
+                      <a href="#" class="btn btn-default">Cryptocurrency</a>
+                      <a href="#" class="btn btn-default">Dance</a>
+                      <a href="#" class="btn btn-default">Fashion</a>
+                      <a href="#" class="btn btn-default">Film</a>
+                      <a href="#" class="btn btn-default">Community</a>
+                      <a href="#" class="btn btn-default">Food</a>
+                      <a href="#" class="btn btn-default">Games</a>
+                      <a href="#" class="btn btn-default">Education</a>
+                      <a href="#" class="btn btn-default">Cause</a>
+                      <a href="#" class="btn btn-default">Politics</a>-->
                         
+                            <!--<input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Category">-->
+                            
                             <input type="text" id="name" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Campain Name">
                             <br><br><br>
                             <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
                             <br><br><br>
-                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" placeholder="Timelimit">
-                            <br><br><br>
-                            <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Goal (i.e. 5000 Finney)">
-                            <br><br><br><br><br>
+                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" style="max-width: 220px; margin-right: 10px;" placeholder="End Date">
+                            <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" style="max-width: 220px;" placeholder="Goal (i.e. 200 WEI)">
+                            <br><br><br><br>
                             <input type="text" id="address" class="form-control" aria-describedby="sizing-addon1" placeholder="Benificiary Address">
+                            <br><br><br>
+                            <select class="form-control" aria-describedby="sizing-addon1" >
+                            	<option>Category</option>
+                            	<option value="0">Small Buisness</option>
+                            	<option value="1">Technology</option>
+                            	<option value="2">Music</option>
+                            	<option value="3">Arts</option>
+                            	<option value="4">Cryptocurrency</option>
+                            	<option value="5">Dance</option>
+                            	<option value="6">Fashion</option>
+                            	<option value="7">Film</option>
+                            	<option value="8">Community</option>
+                            	<option value="9">Food</option>
+                            	<option value="10">Games</option>
+                            	<option value="11">Education</option>
+                            	<option value="12">Cause</option>
+                            	<option value="13">Politics</option>
+                            </select>
                             <br><br><br><br>
                             <a href="#new" id="start_campain" class="btn btn-primary btn-lg" onClick="new_campaign();"><span class="network-name">Start your Campain!</span></a>
                          </div>
@@ -287,7 +323,7 @@
                             
                             <br><br>
                             
-                            <small>Please Verify your campaigns website by copying and pasting the code below into the head tag of your website's index page.</small>
+                            <small>Please add your campaign image to your website, by uploading a 400x</small>
                             <input  class="form-control" id="new_campaign_hash" onClick="this.setSelectionRange(0, this.value.length)"  style="background-color: #F1F1F1;" value="&#60;meta name=&quot;hash_verifier&quot; content=&quot;Jkjfs83IJF9wjfsd9JFKSDFFKJSSs&quot;&#62;">
                             <br>
                             <span>** Why Verify? Funders will trust you more if prove website ownership.</span>
@@ -373,11 +409,11 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="index.html#">Home</a>
+                            <a href="discover.html">Discover</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="tracker.html">Campaign Tracker</a>
+                            <a href="index.html#new">Start</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>

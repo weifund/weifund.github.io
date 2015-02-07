@@ -71,7 +71,7 @@
                         <a href="discover.html">Discover</a>
                     </li>
                     <li>
-                        <a href="tracker.html">Donate</a>
+                        <a href="index.html#new">Start</a>
                     </li>
                     <li>
                         <a href="index.html#services">About</a>
@@ -125,7 +125,7 @@
                     </div>
                     
                 	<div style="margin-top: 20px;">
-                        <h4 class="light"><a href="">Save a our Park</a></h4>                        
+                        <h4 class="light"><a href="">Save Our Park</a></h4>                        
                         <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
                           <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                           </div>
@@ -147,35 +147,44 @@
                 
                 <div class="col-lg-6">
                 
-                    <h2 id="c_name">Jerry's Ice Cream Shop Campaign</h2>
+                    <div class="panel panel-default">
+                      <div class="panel-body">
+                      
+                            <h2 id="c_name" style="margin-top: 0px;">Jerry's Ice Cream Shop Campaign</h2>
                     
-                    <h3><a href="" id="c_website">www.jerrysmission.com</a> <span class="small" id="is_verified"></span></h3>
-                    
-                    
-                    <div class="progress">
-                      <div id="c_progress" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
+                            <h3><a href="" id="c_website">www.jerrysmission.com</a> <span class="small" id="is_verified"></span></h3>
+                            
+                            
+                            <div class="progress">
+                              <div id="c_progress" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
+                              </div>
+                            </div>
+                            
+                            <ul class="list-inline">
+                                <li><h1 style="margin-bottom: 10px;" id="c_backers">45</h1>Backers
+                                </li>
+                                <li><h1 id="c_amount">$16,500</h1>pledged of <span id="c_goal">$20,000</span>
+                                </li>
+                                <li><h1 id="c_days">13</h1>Days to Go
+                                </li>
+                            </ul>
+                            
+                            <br><br>
+                            
+                            <!-- // $('#campaign_id').val(); $('#donate_amount').val(); function donate_campaign(){}; -->
+                            
+                            <div class=" input-group input-group-lg">
+                                <input type="hidden" id="campaign_id">
+                                <input type="number" id="donate_amount" class="form-control" aria-describedby="sizing-addon1" style="width: 200px;" placeholder="Amount">
+                                
+                                <a href="#" onClick="donate_campaign();" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
+                            </div>
+                            
+                            <br>
                       </div>
-                    </div>
+                    </div> <!-- End Panel -->
+                
                     
-                    <ul class="list-inline">
-                        <li><h1 style="margin-bottom: 10px;" id="c_backers">45</h1>Backers
-                        </li>
-                        <li><h1 id="c_amount">$16,500</h1>pledged of <span id="c_goal">$20,000</span>
-                        </li>
-                        <li><h1 id="c_days">13</h1>Days to Go
-                        </li>
-                    </ul>
-                    
-                    <br><br>
-                    
-                    <!-- // $('#campaign_id').val(); $('#donate_amount').val(); function donate_campaign(){}; -->
-                    
-                    <div class=" input-group input-group-lg">
-                        <input type="hidden" id="campaign_id">
-                        <input type="number" id="donate_amount" class="form-control" aria-describedby="sizing-addon1" style="width: 200px;" placeholder="Amount">
-                        
-                        <a href="#" onClick="donate_campaign();" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
-                    </div>
                 </div>
             </div>
 
@@ -218,11 +227,11 @@
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="index.html#">Home</a>
+                            <a href="discover.html">Discover</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="tracker.html">Campaign Tracker</a>
+                            <a href="index.html#new">Start</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
