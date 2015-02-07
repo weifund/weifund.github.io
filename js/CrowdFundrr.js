@@ -128,8 +128,11 @@ function get_campaign(id)
   //  , string32 r_website, address r_benificiary, uint r_fundingGoal
   //  , uint r_numFunders, uint r_amount, uint r_timelimit)
   
+  var stripped_website_url = String(get_camp[1]).replace(/.*?:\/\//g, "");
+  
   $("#c_name").html(get_camp[0]);
-  $("#c_website").html(get_camp[1]);
+  $("#c_website").attr('href', stripped_website_url);
+  $("#c_website").html(stripped_website_url);
   $("#c_goal").html('$' + String(get_camp[3]));
   $("#c_backers").html(String(get_camp[4]));
   $("#c_amount").html('$' + String(get_camp[5]));
