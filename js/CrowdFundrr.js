@@ -97,13 +97,28 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
-	$.ajax({
-		url: "http://kipoh.com",
-		xhrFields: {
-			withCredentials: true
-		}
-		, success: function(data, stringd){alert(stringd);}
-	});
+	function createCORSRequest(method, url){
+	    var xhr = new XMLHttpRequest();
+	    if ("withCredentials" in xhr){
+	        xhr.open(method, url, true);
+	    } else if (typeof XDomainRequest != "undefined"){
+	        xhr = new XDomainRequest();
+	        xhr.open(method, url);
+	    } else {
+	        xhr = null;
+	    }
+	    return xhr;
+	}
+	
+	var request = createCORSRequest("get", "http://www.stackoverflow.com/");
+	if (request){
+	    request.onload = function(data) {
+	    	alert(data);
+	        // ...
+	    };
+	    request.onreadystatechange = handler;
+	    request.send();
+	}
 	
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
