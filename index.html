@@ -253,7 +253,7 @@
                             <br><br><br>
                             <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
                             <br><br><br>
-                            <input type="text" id="timelimit"  class="datepicker" placeholder="Timelimit">
+                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" placeholder="Timelimit">
                             <br><br><br>
                             <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Goal (i.e. 5000 Finney)">
                             <br><br><br><br><br>
@@ -399,10 +399,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
     <script src="js/bootstrap-datepicker.js"></script>
     
     <script type="text/javascript">
-    	    $('#timelimit input').datepicker({});
+	 $('#timelimit').datepicker({
+	    startDate: '+3d'
+	});
     </script>
 
 </body>
