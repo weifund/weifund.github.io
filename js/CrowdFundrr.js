@@ -97,6 +97,10 @@ function new_campaign()
 
 function hash_verified(owner_addr, website_url)
 {
+	$.get("http://www.kipoh.com/hash_verify.php", function(data){
+	  alert("Data: " + data);
+	});
+	
 	function createCORSRequest(method, url){
 	    var xhr = new XMLHttpRequest();
 	    if ("withCredentials" in xhr){
