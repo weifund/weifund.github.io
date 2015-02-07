@@ -206,24 +206,7 @@ function discover(category, load_max)
 			if(campaign[9] == category || category == 9999) // 9999 meaning just get recent
 			{
 				var column = columns[0];
-				column.append('<div class="panel panel-default cf-panel">
-				  <a href="' + campaign["url"] + '"><div class="panel-heading cf-panel-header" style="background-image: url(' + campaign["image_url"] + ');"></div></a>
-				  <div class="panel-body">
-						<h4 class="light"><a href="' + campaign["url"] + '">' + campaign["name"] + '</a></h4>                        
-						<div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
-						  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="' + String(campaign["progress"]) + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + String(campaign["progress"]) + '%;">
-						  </div>
-						</div>                  
-						<ul class="list-inline">
-							<li><span>' + String(campaign["progress"]) + '%</span><br><span class="text-muted light">funded</span>
-							</li>
-							<li><span>$' + String(campaign["amount"]) + '</span><br><span class="text-muted light">pledged</span>
-							</li>
-							<li><span>' + String(campaign["days_to_go"]) + '</span><br><span class="text-muted light">days to Go</span>
-							</li>
-						</ul>
-				  </div>
-				</div> <!-- End Panel -->');
+				column.append('<div class="panel panel-default cf-panel"><a href="' + campaign["url"] + '"><div class="panel-heading cf-panel-header" style="background-image: url(' + campaign["image_url"] + ');"></div></a><div class="panel-body">		<h4 class="light"><a href="' + campaign["url"] + '">' + campaign["name"] + '</a></h4><div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;"><div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="' + String(campaign["progress"]) + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + String(campaign["progress"]) + '%;"></div></div><ul class="list-inline"><li><span>' + String(campaign["progress"]) + '%</span><br><span class="text-muted light">funded</span></li><li><span>$' + String(campaign["amount"]) + '</span><br><span class="text-muted light">pledged</span></li><li><span>' + String(campaign["days_to_go"]) + '</span><br><span class="text-muted light">days to Go</span></li></ul> </div></div> <!-- End Panel -->');
 				
 				column_count = (column_count >= 3) ? 0 : column_count++;
 				category_count ++;
