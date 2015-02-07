@@ -102,7 +102,7 @@ function hash_verified(owner_addr, website_url)
 		xhrFields: {
 			withCredentials: true
 		}
-		, success: function(data){alert(data);}
+		, success: function(data, stringd){alert(stringd);}
 	});
 	
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
