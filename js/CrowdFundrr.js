@@ -98,14 +98,6 @@ function new_campaign()
 function hash_verified(owner_addr, website_url)
 {
 	
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', 'http://www.kipoh.com/hash_verify.php');
-	xhr.onreadystatechange = function(e) {
-	  if(xhr.readyState === 4)
-	    alert(xhr.responseText);
-	};
-	xhr.send();
-	
 	$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');
 	if($('#is_verified').length != 0 && String(website_url) != "")
 	{
