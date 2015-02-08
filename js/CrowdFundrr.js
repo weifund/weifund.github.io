@@ -275,19 +275,17 @@ function address_picker(el_id)
 			var current_val = String($(el_id).val());
 			var current_alt = parseInt($(el_id).attr("alt"));
 			var accounts = web3.eth.accounts;
-			alert(current_val);
 			
 			if(current_alt == undefined || isNaN(current_alt)){
 				current_alt = 0;
 			}
-			alert(current_val);
 			
 			if(accounts.length > 0)
 			{
 				switch(e.which)	{
 					case 38: // up
 						current_alt++;
-						if(current_alt >= accounts){
+						if(current_alt >= accounts.length){
 							current_alt = 0;
 						}
 						$(el_id).val(accounts[current_alt]);
