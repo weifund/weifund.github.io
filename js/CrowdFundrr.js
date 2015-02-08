@@ -272,13 +272,18 @@ function address_picker(el_id)
 	if($(el_id).length != 0 && web3 != undefined)
 	{
 		$(el_id).keydown(function(e) {
+			alert('Test!1');
 			var current_val = String($(el_id).val());
 			var current_alt = parseInt($(el_id).attr("alt"));
 			var accounts = web3.eth.accounts;
+			alert(current_val);
+			alert(accounts);
 			
 			if(current_alt == undefined){
 				current_alt = 0;
 			}
+			
+			alert(current_alt);
 			
 			if(accounts.length > 0)
 			{
@@ -288,6 +293,7 @@ function address_picker(el_id)
 						if(current_alt >= accounts){
 							current_alt = 0;
 						}
+						alert('Up!');
 						$(el_id).val(accounts[current_alt]);
 						$(el_id).prop("alt", String(current_alt));
 					break;
@@ -297,6 +303,7 @@ function address_picker(el_id)
 						if(current_alt < 0){
 							current_alt = accounts.length - 1;
 						}
+						alert('Down!');
 						$(el_id).val(accounts[current_alt]);
 						$(el_id).prop("alt", String(current_alt));
 					break;
