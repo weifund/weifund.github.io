@@ -112,6 +112,7 @@ function loadCampaign(cid)
 			, "image_url": String(raw_campaign[1]) + '/crowdfundrr.png'
 			, "websiteClean": cleanURL(raw_campaign[1])
 			, "url": "http://crowdfundrr.github.io/?id=" + String(cid)
+			, "reached": (progress >= 100 ? true : false)
 		};
 	
 		return return_obj;
@@ -191,6 +192,24 @@ function new_campaign()
 		$("#new_campaign_success_2").show();
 		$("#campaign_success_wrapper").show();
 		$("#campaign_success_wrapper").css('display', 'block');
+	}
+}
+
+function payout_campaign()
+{
+	if($('#campaign_id').length != 0 && web3 != undefined)
+	{
+		var campaign_id = parseInt($('#campaign_id').val());
+		
+		if(campaign_id != undefined && campaign_id >= 0){
+			var campaign = loadCampaign(campaign_id);
+			
+			if(campaign !== false){
+				if(campaign['reached'] == true){
+					var payout_campaign = contract.transact().checkGoalReached(campaign_id);
+				}
+			}
+		}
 	}
 }
 
@@ -315,6 +334,13 @@ function get_campaign(id)
 		$("#c_days").html(String(campaign["days_to_go"])); //get_camp[6]
 		$('#campaign_id').val(String(c_id));
 		$('#c_progress').css('width', String(campaign["progress"])+'%').attr('aria-valuenow', campaign["progress"]);
+		
+		if(campaign['reached'] == true){
+			$('#donate_to_campaign').css('display', 'none');
+			$('#donate_to_campaign').hide();
+			$('#payout_to_campaign').css('display', 'block');
+			$('#payout_to_campaign').show();
+		}
 	}
 }
 

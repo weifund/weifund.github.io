@@ -26,8 +26,6 @@
     <script type="text/javascript" src="js/ethereum.js"></script>
     <script type="text/javascript" src="js/CrowdFundrr.js"></script>
     
-    <script src="//cdn.rawgit.com/jpillora/xdomain/0.6.17/dist/xdomain.min.js" slave="http://kipoh.com"></script>
-    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -176,8 +174,9 @@
                             <div class=" input-group input-group-lg">
                                 <input type="hidden" id="campaign_id">
                                 <input type="number" id="donate_amount" class="form-control" aria-describedby="sizing-addon1" style="width: 200px;" placeholder="Amount">
-                                
-                                <a href="#" onClick="donate_campaign();" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
+                                                          	                                                               
+                             <a href="#" id="payout_to_campaign" onClick="payout_campaign();" class="btn btn-success btn-default btn-lg" style="display: none;">Payout to Beneficiary</a>
+                             <a href="#" id="donate_to_campaign" onClick="donate_campaign();" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
                             </div>
                       </div>
                     </div> <!-- End Panel -->
