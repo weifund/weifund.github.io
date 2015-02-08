@@ -206,7 +206,7 @@ function most_recent(load_max)
 		{
 			$('#most_recent_campaigns').empty();
 			
-			for(var cid = (total_campaigns - 1); cid >= 0; cid--)
+			for(var cid = (total_campaigns - 1); cid > (total_campaigns - load_max); cid--)
 			{
 				var campaign = loadCampaign(cid);
 				
