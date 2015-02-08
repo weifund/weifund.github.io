@@ -306,7 +306,7 @@ function donate_campaign()
 	}
 }
 
-function check_for_id()
+function get_qs()
 {
 	var qs = (function(a) {
 	    if (a == "") return {};
@@ -321,8 +321,25 @@ function check_for_id()
 	    }
 	    return b;
 	})(window.location.search.substr(1).split('&'));
+	return qs;
+}
+
+function discoveryCategory()
+{
+	var qs = get_qs();
+	var category = qs['c']; // Get C from URL
 	
-	var get_url_id = qs["id"]; //getUrlParameter('id');
+	if(category == undefined || category == ""){
+		category = 9999;
+	}
+	
+	return category;
+}
+
+function check_for_id()
+{
+	var qs = get_qs();	
+	var get_url_id = qs["id"];
 	
 	if(parseInt(get_url_id) >= 0)
 	{

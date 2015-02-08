@@ -185,20 +185,37 @@
 
             <div class="row" style="margin-top: 40px;">
                 <div class="col-lg-12" class="categories">                
-                      <a href="#" class="btn btn-default">Small Buisness</a>
-                      <a href="#" class="btn btn-default">Technology</a>
-                      <a href="#" class="btn btn-default">Music</a>
-                      <a href="#" class="btn btn-default">Arts</a>
-                      <a href="#" class="btn btn-default">Cryptocurrency</a>
-                      <a href="#" class="btn btn-default">Dance</a>
-                      <a href="#" class="btn btn-default">Fashion</a>
-                      <a href="#" class="btn btn-default">Film</a>
-                      <a href="#" class="btn btn-default">Community</a>
-                      <a href="#" class="btn btn-default">Food</a>
-                      <a href="#" class="btn btn-default">Games</a>
-                      <a href="#" class="btn btn-default">Education</a>
-                      <a href="#" class="btn btn-default">Cause</a>
-                      <a href="#" class="btn btn-default">Politics</a>
+                      <a href="discover.html?c=0" class="btn btn-default">Small Buisness</a>
+                      <a href="discover.html?c=1" class="btn btn-default">Technology</a>
+                      <a href="discover.html?c=2" class="btn btn-default">Music</a>
+                      <a href="discover.html?c=3" class="btn btn-default">Arts</a>
+                      <a href="discover.html?c=4" class="btn btn-default">Cryptocurrency</a>
+                      <a href="discover.html?c=5" class="btn btn-default">Dance</a>
+                      <a href="discover.html?c=6" class="btn btn-default">Fashion</a>
+                      <a href="discover.html?c=7" class="btn btn-default">Film</a>
+                      <a href="discover.html?c=8" class="btn btn-default">Community</a>
+                      <a href="discover.html?c=9" class="btn btn-default">Food</a>
+                      <a href="discover.html?c=10" class="btn btn-default">Games</a>
+                      <a href="discover.html?c=11" class="btn btn-default">Education</a>
+                      <a href="discover.html?c=12" class="btn btn-default">Cause</a>
+                      <a href="discover.html?c=13" class="btn btn-default">Politics</a>
+                      
+                        <!--
+                        <option value="0">Small Buisness</option>
+                        <option value="1">Technology</option>
+                        <option value="2">Music</option>
+                        <option value="3">Arts</option>
+                        <option value="4">Cryptocurrency</option>
+                        <option value="5">Dance</option>
+                        <option value="6">Fashion</option>
+                        <option value="7">Film</option>
+                        <option value="8">Community</option>
+                        <option value="9">Food</option>
+                        <option value="10">Games</option>
+                        <option value="11">Education</option>
+                        <option value="12">Cause</option>
+                        <option value="13">Politics</option>
+                        -->
                 </div>
             </div>
 
@@ -458,7 +475,8 @@
 	<script type="text/javascript">
 	
 	clearDiscover();
-	discover(9999, 13, 0);
+	var category = discoveryCategory();
+	discover(category, 6, 0);
 	
 	</script>
 </body>
