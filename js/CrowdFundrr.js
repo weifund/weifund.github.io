@@ -280,7 +280,7 @@ function address_picker(el_id)
 			alert(current_val);
 			alert(accounts);
 			
-			if(current_alt == undefined){
+			if(current_alt == undefined || isNaN(current_alt)){
 				current_alt = 0;
 			}
 			
