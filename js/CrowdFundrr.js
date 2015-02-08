@@ -164,8 +164,8 @@ function new_campaign()
 		$("#new_campaign_goto").attr("href", campaign['url']);
 		
 		$("#campaign_embed_1").click(function(){create_embed(String(campaign['id']), 20);});
-		$("#campaign_embed_2").click(function(){create_embed(String(campaign['id']), 20);});
-		$("#campaign_embed_3").click(function(){create_embed(String(campaign['id']), 20);});
+		$("#campaign_embed_2").click(function(){create_embed(String(campaign['id']), 100);});
+		$("#campaign_embed_3").click(function(){create_embed(String(campaign['id']), 150);});
 		
 		create_embed(campaign['id'], 100);
 		
