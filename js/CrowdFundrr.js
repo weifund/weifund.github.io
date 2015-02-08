@@ -334,8 +334,13 @@ function get_campaign(id)
 		$("#c_days").html(String(campaign["days_to_go"])); //get_camp[6]
 		$('#campaign_id').val(String(c_id));
 		$('#c_progress').css('width', String(campaign["progress"])+'%').attr('aria-valuenow', campaign["progress"]);
+		most_recent(2);
 		
 		if(campaign['reached'] == true){
+			$("#c_name").html(campaign["name"] + " is funded!");
+			$('#c_progress').addClass('progress-bar-success');
+			$('#donate_amount').css('display', 'none');
+			$('#donate_amount').hide();
 			$('#donate_to_campaign').css('display', 'none');
 			$('#donate_to_campaign').hide();
 			$('#payout_to_campaign').css('display', 'block');
