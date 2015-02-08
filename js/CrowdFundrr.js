@@ -119,6 +119,13 @@ function loadCampaign(cid)
 		return false;
 	}
 }
+		
+function create_embed(id, img_size)
+{
+	if($('#new_campaign_embed').length != 0){
+		$('#new_campaign_embed').val('<a href="http://www.crowdfundrr.github.io?id=' + String(id) + '"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="http://crowdfundrr.github.io/img/crowdfundrr_'+ String(img_size) +'.png"></a>');
+	}
+}
 
 function new_campaign()
 {
@@ -155,14 +162,41 @@ function new_campaign()
 	if(campaign !== false)
 	{
 		$("#new_campaign_wrapper").hide();
+		$("#campaign_details").hide();
 		
 		$("#new_campaign_id").html(String(campaign['id']));
 		$("#new_campaign_name").html(campaign['name']);
+		("#new_campaign_name").val(campaign['url']);
+		$("#new_campaign_website").html(campaign['url']);
 		$("#new_campaign_name").attr("href", campaign['url']);
 		$("#new_campaign_url").html(campaign['url']);
 		$("#new_campaign_url").attr("href", campaign['url']);
 		$("#new_campaign_goto").attr("href", campaign['url']);
 		
+		$("#campaign_embed_1").click(function(){create_embed(String(campaign['id']), 20);});
+		$("#campaign_embed_2").click(function(){create_embed(String(campaign['id']), 20);});
+		$("#campaign_embed_3").click(function(){create_embed(String(campaign['id']), 20);});
+		
+		/*show campaign_success_wrapper
+		hide campaign_details
+		show new_campaign_success_2
+		
+		new_campaign_name
+		new_campaign_name HREF 
+		new_campaign_id
+		new_campaign_url_1 http://www.crowdfundrr.github.io/?id=1
+		new_campaign_goto tracker.html?id=1
+		new_campaign_website http://www.kipoh.com
+		
+		CONTROLLER NEEDED
+		
+		campaign_embed_1
+		campaign_embed_2
+		campaign_embed_3
+		
+		new_campaign_embed*/
+		
+		$("#new_campaign_success_2").show();
 		$("#campaign_success_wrapper").show();
 		$("#campaign_success_wrapper").css('display', 'block');
 	}
@@ -188,10 +222,19 @@ function hash_verified(owner_addr, website_url)
 	}*/
 }
 
-function discover(category, load_max)
+function clearDiscover()
+{
+	$('#discover_1').empty();
+	$('#discover_2').empty();
+	$('#discover_3').empty();
+	$('#discover_4').empty();
+}
+
+function discover(category, load_max, startIndex)
 {
 	category = parseInt(category);
 	load_max = parseInt(load_max);
+	startIndex = parseInt(startIndex);
 	
 	if(category == 0 || category == undefined){
 		category = 0;
@@ -207,24 +250,31 @@ function discover(category, load_max)
 	var category_count = 0;
 	var column_count = 0;
 	
+	if(startIndex == 0 || startIndex == undefined || startIndex > total_campaigns){
+		startIndex = total_campaigns;
+	}
+	
+	var current_index = startIndex;
+	
 	for(var cid = parseInt(total_campaigns - 1); cid >= 0; cid--)
 	{
 		var campaign = loadCampaign(cid);
-		
-		alert(JSON.stringify(campaign));
 		
 		if(category_count < load_max && campaign !== false)
 		{
 			if(campaign[9] == category || category == 9999) // 9999 meaning just get recent
 			{
 				var column = columns[0];
-				column.append('<div class="panel panel-default cf-panel"><a href="' + campaign["url"] + '"><div class="panel-heading cf-panel-header" style="background-image: url(' + campaign["image_url"] + ');"></div></a><div class="panel-body">		<h4 class="light"><a href="' + campaign["url"] + '">' + campaign["name"] + '</a></h4><div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;"><div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="' + String(campaign["progress"]) + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + String(campaign["progress"]) + '%;"></div></div><ul class="list-inline"><li><span>' + String(campaign["progress"]) + '%</span><br><span class="text-muted light">funded</span></li><li><span>$' + String(campaign["amount"]) + '</span><br><span class="text-muted light">pledged</span></li><li><span>' + String(campaign["days_to_go"]) + '</span><br><span class="text-muted light">days to Go</span></li></ul> </div></div> <!-- End Panel -->');
+				column.append('<div class="panel panel-default cf-panel"><a href="' + campaign["url"] + '"><div class="panel-heading cf-panel-header" style="padding: 0px; background-image: url(img/crowdfundrr_logo.png);"><div class="panel-heading cf-panel-header" style="background-image: url(' + campaign['image_url'] + ');"></div></div></a><div class="panel-body">		<h4 class="light"><a href="' + campaign["url"] + '">' + campaign["name"] + '</a></h4><div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;"><div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="' + String(campaign["progress"]) + '" aria-valuemin="0" aria-valuemax="100" style="width: ' + String(campaign["progress"]) + '%;"></div></div><ul class="list-inline"><li><span>' + String(campaign["progress"]) + '%</span><br><span class="text-muted light">funded</span></li><li><span>$' + String(campaign["amount"]) + '</span><br><span class="text-muted light">pledged</span></li><li><span>' + String(campaign["days_to_go"]) + '</span><br><span class="text-muted light">days to Go</span></li></ul> </div></div> <!-- End Panel -->');
 				
+				current_index --;
 				column_count = (column_count >= 3) ? 0 : column_count++;
 				category_count ++;
 			}
 		}
 	}
+	
+	return current_index;
 }
 
 function get_campaign(id)

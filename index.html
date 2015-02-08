@@ -20,6 +20,14 @@
     
     <link href="css/datepicker.css" rel="stylesheet">
     
+    <style type="text/css">
+	.light
+	{
+		font-weight: lighter;
+	}
+	
+	</style>
+    
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -244,7 +252,7 @@
                 </div>-->
                 <div class="col-lg-5" style="min-height: 650px;">
                 
-                	<div id="new_campaign_wrapper" style="margin-top: 60px;">
+                	<div id="new_campaign_wrapper" style="margin-top: 60px;" class="hide">
                         <h2>Start Your Campain</h2>
                         <div class=" input-group input-group-lg">
                          <p class="lead">Fill out your project details below and get crowd funding!</p>
@@ -299,8 +307,8 @@
                          </div>
                      </div>
                      
-                     <div id="campaign_success_wrapper" style="display: none;">
-                        <h2>Your Campaign Has Started!</h2>
+                     <div id="campaign_success_wrapper" style="margin-top: 60px;"> <!-- style="display: none;"-->
+                        <h2>Your Campaign Has Started</h2>
                         
                         <!--
                         string32 r_name
@@ -315,36 +323,91 @@
                         , hash r_verifier
                         -->
                     
+                    	<!--
+                        
+                        show campaign_success_wrapper
+                        hide campaign_details
+                        show new_campaign_success_2
+                        
+                        new_campaign_name
+                        new_campaign_name HREF 
+                        new_campaign_id
+                        new_campaign_url_1 http://www.crowdfundrr.github.io/?id=1
+                        new_campaign_goto tracker.html?id=1
+                        new_campaign_website http://www.kipoh.com
+                        
+                        CONTROLLER NEEDED
+                        
+                        campaign_embed_1
+                        campaign_embed_2
+                        campaign_embed_3
+                        
+                        new_campaign_embed
+                        
+                        -->
+                    
                     
                         <div style="margin-top: 40px;">
-                            <h4>Your Campaign #<strong id="new_campaign_id">1</strong></h4>
-                            <h3 class="light"><a href="tracker.html?id=1" id="new_campaign_name">Johns New Campaign</a></h3>                            
-                            <h4><a id="new_campaign_url" href="http://www.crowdfundrr.github.io?id=1">http://www.crowdfundrr.github.io?id=1</a></h4>
+                            <h2 style="margin-top: 0px;"><a href="tracker.html?id=1" class="light" id="new_campaign_name">Johns New Campaign</a> has started</h2>
+                            <h4><span class="light">Campaign ID #</span><strong id="new_campaign_id">1</strong></h4>
                             
-                            <br><br>
+                            <h3 style="margin-top: 60px;">Your Campaign URL:</h3>
+                            <input type="text" id="new_campaign_url_1" style="border-radius: 5px;" class="form-control" onClick="this.setSelectionRange(0, this.value.length)" value="http://www.crowdfundrr.github.io/?id=1"> 
+                            <!-- End of URL -->
+                        
+                            <br><br><br>
                             
-                            <small>Please add your campaign image to your website, by uploading a 400x</small>
-                            <input  class="form-control" id="new_campaign_hash" onClick="this.setSelectionRange(0, this.value.length)"  style="background-color: #F1F1F1;" value="&#60;meta name=&quot;hash_verifier&quot; content=&quot;Jkjfs83IJF9wjfsd9JFKSDFFKJSSs&quot;&#62;">
-                            <br>
-                            <span>** Why Verify? Funders will trust you more if prove website ownership.</span>
-                            
-                            <br><br><br><br>
                             
                             <a href="tracker.html?id=1" id="new_campaign_goto" id="start_campain" class="btn btn-primary btn-lg"><span class="network-name">Goto My Campaign</span></a>
+                            
+                            
+                            
                         </div>
+                        
+                        <!--<br><br><br><br><br> <div class="glyphicon text-primary glyphicon-upload" style="font-size: 400px;"></div>-->
                      
                      </div>
                      
                      
                 </div>
                 
-                <div class="col-lg-5 col-lg-offset-2" style="min-height: 650px; padding-top: 40px;">
-                    <h2>Details</h2>
-                   	 <p class="lead"> • All funds are in ether denominations</p>
-                   	 <p class="lead"> • If your campaign goal is not reached by the alloted time period, all ether is returned to the respective doners</p>
-                   	 <p class="lead"> • If the campaign goal is reached, the funds will be avilable to the benificiary address</p>
-                   	 <p class="lead"> • Please provide a website url and campain name below 32 characters</p>
-                   	 <p class="lead"> • A campain ID will be provided after the campain is started, use this to promote your campain</p>
+                <div class="col-lg-5 col-lg-offset-2" style="min-height: 650px;">
+                	<div id="campaign_details" class="hide" style=" padding-top: 40px;">
+                         <h2>Details</h2>
+                         <p class="lead"> • All funds are in ether denominations</p>
+                         <p class="lead"> • If your campaign goal is not reached by the alloted time period, all ether is returned to the respective doners</p>
+                         <p class="lead"> • If the campaign goal is reached, the funds will be avilable to the benificiary address</p>
+                         <p class="lead"> • Please provide a website url and campain name below 32 characters</p>
+                         <p class="lead"> • A campain ID will be provided after the campain is started, use this to promote your campain</p>
+                     </div>
+                     
+                     <div id="new_campaign_success_2" style="margin-top: 50px;">
+                            
+                        <h3>Dont Forget to Add Your Campaign Image</h3>
+                        
+                        <div class="panel panel-default cf-panel">
+                            <div class="panel-heading">Upload a 500px by 300px PNG image titled "crowdfundrr.png" (without the qoutes) to your website's main directory.</div>
+                            <div class="panel-body">
+                                <h4 style="margin: 0px;"><span id="new_campaign_website" class="light">http://www.kipoh.com</span><strong>/crowdfundrr.png</strong></h4>
+                            </div>
+                            <div class="panel-footer">**Note, this is the image that will be used on crowdfundrr.</div>
+                        </div>
+                        
+                        <h3 style="margin-top: 40px;">Embed your Campaign Link</h3>
+                        <div class="panel panel-default cf-panel">
+                            <div class="panel-heading text-center">
+                                <a href="http://www.crowdfundrr.github.io?id=1" id="campaign_embed_1" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_20.png"></a>
+                                <a href="http://www.crowdfundrr.github.io?id=1" id="campaign_embed_2" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_100.png"></a>
+                                <a href="http://www.crowdfundrr.github.io?id=1" id="campaign_embed_3" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_150.png"></a>
+                            </div>
+                            <div class="panel-body"><textarea id="new_campaign_embed" style="border-radius: 5px;" class="form-control" onClick="this.setSelectionRange(0, this.value.length)"><a href="http://www.crowdfundrr.github.io?id=1"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="http://crowdfundrr.github.io/img/crowdfundrr_20.png"></a></textarea>
+                            
+                                
+                            </div>
+                        </div> 
+                        <!-- End of Embed-->
+                    </div>
+                     
                 </div>
                 
                 <!--<div class="col-lg-5" style="min-height: 650px; padding-top: 40px;">
