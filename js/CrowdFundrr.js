@@ -266,6 +266,49 @@ function clearDiscover()
 	$('#discover_4').empty();
 }
 
+function address_picker(el_id)
+{
+	el_id = String(el_id);
+	if($(el_id).length != 0 && web3 != undefined)
+	{
+		$(el_id).keydown(function(e) {
+			var current_val = String($(el_id).val());
+			var current_alt = parseInt($(el_id).attr("alt"));
+			var accounts = web3.eth.accounts;
+			
+			if(current_alt == undefined){
+				current_alt = 0;
+			}
+			
+			if(accounts.length > 0)
+			{
+				switch(e.which)	{
+					case 38: // up
+						current_alt++;
+						if(current_alt >= accounts){
+							current_alt = 0;
+						}
+						$(el_id).val(accounts[current_alt]);
+						$(el_id).prop("alt", String(current_alt));
+					break;
+					
+					case 40: // down
+						current_alt--;
+						if(current_alt < 0){
+							current_alt = accounts.length - 1;
+						}
+						$(el_id).val(accounts[current_alt]);
+						$(el_id).prop("alt", String(current_alt));
+					break;
+					
+					default: return; // exit this handler for other keys
+				}
+				e.preventDefault(); // prevent the default action (scroll / move caret)
+			}
+		});
+	}
+}
+
 function discover(category, load_max, startIndex)
 {
 	category = parseInt(category);
