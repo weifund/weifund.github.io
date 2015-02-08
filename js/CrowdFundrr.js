@@ -137,14 +137,9 @@ function new_campaign()
 	var c_timelimit = new Date(String($('#timelimit').val())).getTime();	
 	var accounts = web3.eth.accounts;
 	
-	if(String(c_beneficiary) == ""){
+	if(String(c_beneficiary) == "" || c_beneficiary == undefined){
 		c_beneficiary = accounts[0];
 	}
-	
-	alert(accounts);
-	alert(c_timelimit);
-	alert(c_category);
-	alert(c_goal);
 	
 	if(String(c_name) == "" || c_goal <= 0 || c_timelimit <= 0){
 		return false;
@@ -152,12 +147,7 @@ function new_campaign()
 	
 	var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category); //parseInt(c_timelimit)
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
-	
-	alert(get_camp_id);
-	
 	var campaign = loadCampaign(get_camp_id);
-	
-	alert(JSON.stringify(campaign));
 	
 	if(campaign !== false)
 	{
@@ -167,7 +157,7 @@ function new_campaign()
 		$("#new_campaign_id").html(String(campaign['id']));
 		$("#new_campaign_name").html(campaign['name']);
 		$("#new_campaign_url_1").val(campaign['url']);
-		$("#new_campaign_website").html(campaign['url']);
+		$("#new_campaign_website").html(campaign['website']);
 		$("#new_campaign_name").attr("href", campaign['url']);
 		$("#new_campaign_url").html(campaign['url']);
 		$("#new_campaign_url").attr("href", campaign['url']);
@@ -176,6 +166,8 @@ function new_campaign()
 		$("#campaign_embed_1").click(function(){create_embed(String(campaign['id']), 20);});
 		$("#campaign_embed_2").click(function(){create_embed(String(campaign['id']), 20);});
 		$("#campaign_embed_3").click(function(){create_embed(String(campaign['id']), 20);});
+		
+		create_embed(campaign['id'], 100);
 		
 		/*show campaign_success_wrapper
 		hide campaign_details
