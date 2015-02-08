@@ -271,6 +271,7 @@ function address_picker(el_id)
 	el_id = String(el_id);
 	if($(el_id).length != 0 && web3 != undefined)
 	{
+		alert('Test!1');
 		$(el_id).keydown(function(e) {
 			alert('Test!1');
 			var current_val = String($(el_id).val());
