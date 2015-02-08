@@ -194,6 +194,31 @@ function new_campaign()
 	}
 }
 
+function most_recent(load_max)
+{
+	load_max = parseInt(load_max);
+	if($('#most_recent_campaigns').length != 0 && web3 != undefined && load_max != undefined)
+	{
+		var total_campaigns = contract.call().getNumCampaigns();
+		total_campaigns = parseInt(total_campaigns);
+		
+		if(total_campaigns != 0 && total_campaigns >= load_max)
+		{
+			$('#most_recent_campaigns').empty();
+			
+			for(var cid = (total_campaigns - 1); cid >= 0; cid--)
+			{
+				var campaign = loadCampaign(cid);
+				
+				if(campaign !== false){
+					var raw_html = '<div style="margin-top: 20px;"><h4 class="light"><a href="' + campaign['url'] + '">' + campaign['name'] + '</a></h4><div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;"><div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="' + String(campaign['progress']) + '" aria-valuemin="0" aria-valuemax="100"></div></div><ul class="list-inline"><li><span>' + String(campaign['progress']) + '%</span><br><span class="text-muted light">funded</span></li><li><span>' + String(campaign['numFunders']) + '</span><br><span class="text-muted light">backers</span></li><li><span>$' + String(campaign['amount']) + '</span><br><span class="text-muted light">pledged</span></li><li><span>' + String(campaign['days_to_go']) + '</span><br><span class="text-muted light">days to Go</span></li></ul></div>';
+					$('#most_recent_campaigns').append(raw_html);
+				}
+			}
+		}
+	}
+}
+
 function hash_verified(owner_addr, website_url)
 {
 	/*$('#is_verified').html('<i class="text-danger glyphicon glyphicon-remove"></i> <span class="text-danger">Not Verified</span>');

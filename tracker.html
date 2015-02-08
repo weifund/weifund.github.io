@@ -106,41 +106,43 @@
                     
                     <h2>Recent</h2><br>
                     
-                	<div>
-                        <h4 class="light"><a href="">Open Source: Radio Potdast</a></h4>                        
-                        <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 0%;">
-                          </div>
-                        </div>                        
-                        <ul class="list-inline">
-                            <li><span>43%</span><br><span class="text-muted light">funded</span>
-                            </li>
-                            <li><span>5</span><br><span class="text-muted light">backers</span>
-                            </li>
-                            <li><span>$13,299</span><br><span class="text-muted light">pledged</span>
-                            </li>
-                            <li><span>10</span><br><span class="text-muted light">days to Go</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                	<div style="margin-top: 20px;">
-                        <h4 class="light"><a href="">Save Our Park</a></h4>                        
-                        <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
-                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                          </div>
-                        </div>                        
-                        <ul class="list-inline">
-                            <li><span>63%</span><br><span class="text-muted light">funded</span>
-                            </li>
-                            <li><span>100</span><br><span class="text-muted light">backers</span>
-                            </li>
-                            <li><span>$23,299</span><br><span class="text-muted light">pledged</span>
-                            </li>
-                            <li><span>15</span><br><span class="text-muted light">days to Go</span>
-                            </li>
-                        </ul>
-                    </div>
+                     <div id="most_recent_campaigns">
+                         <div>
+                            <h4 class="light"><a href="">Open Source: Radio Potdast</a></h4>                        
+                            <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
+                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="20" style="width: 0%;">
+                              </div>
+                            </div>                        
+                            <ul class="list-inline">
+                                <li><span>43%</span><br><span class="text-muted light">funded</span>
+                                </li>
+                                <li><span>5</span><br><span class="text-muted light">backers</span>
+                                </li>
+                                <li><span>$13,299</span><br><span class="text-muted light">pledged</span>
+                                </li>
+                                <li><span>10</span><br><span class="text-muted light">days to Go</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <h4 class="light"><a href="">Save Our Park</a></h4>                        
+                            <div class="progress" style="height: 7px; margin-bottom: 10px; max-width: 400px;">
+                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                              </div>
+                            </div>                        
+                            <ul class="list-inline">
+                                <li><span>63%</span><br><span class="text-muted light">funded</span>
+                                </li>
+                                <li><span>100</span><br><span class="text-muted light">backers</span>
+                                </li>
+                                <li><span>$23,299</span><br><span class="text-muted light">pledged</span>
+                                </li>
+                                <li><span>15</span><br><span class="text-muted light">days to Go</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> <!-- End Most Recent -->
                     
                     
                 </div>
@@ -149,11 +151,9 @@
                 
                     <div class="panel panel-default">
                       <div class="panel-body">
-                      
                             <h2 id="c_name" style="margin-top: 0px;">Jerry's Ice Cream Shop Campaign</h2>
                     
                             <h3><a href="" id="c_website">www.jerrysmission.com</a> <span class="small" id="is_verified"></span></h3>
-                            
                             
                             <div class="progress">
                               <div id="c_progress" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="20" style="width: 60%;">
@@ -179,11 +179,8 @@
                                 
                                 <a href="#" onClick="donate_campaign();" class="btn btn-primary btn-default btn-lg">Donate to Campaign</a>
                             </div>
-                            
-                            <br>
                       </div>
                     </div> <!-- End Panel -->
-                
                     
                 </div>
             </div>
@@ -191,11 +188,12 @@
         </div>
         <!-- /.container -->
         
-        	<script type="text/javascript">
-		
-		check_for_id();
-		
-		</script>
+		<script type="text/javascript">
+        
+        most_recent(2);
+        check_for_id();
+        
+        </script>
 
     </div>
     <!-- /.banner -->

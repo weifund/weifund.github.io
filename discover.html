@@ -473,11 +473,12 @@
     <script src="js/bootstrap.min.js"></script>
     
 	<script type="text/javascript">
+	if(web3 !== undefined){
+		clearDiscover();
+	}
 	
-	clearDiscover();
 	var category = discoveryCategory();
-	discover(category, 6, 0);
-	
+	discover(category, 6, 0);	
 	</script>
 </body>
 
