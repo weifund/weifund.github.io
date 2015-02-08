@@ -228,7 +228,7 @@ function discover(category, load_max, startIndex)
 	load_max = parseInt(load_max);
 	startIndex = parseInt(startIndex);
 	
-	if(category == 0 || category == undefined){
+	if(category == undefined){
 		category = 0;
 	}
 	
