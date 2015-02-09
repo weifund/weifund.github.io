@@ -348,7 +348,7 @@ function discover(category, load_max, startIndex)
 				
 				if(column_count >= 3)
 				{
-					$('#discover_section').append('<div class="row-fluid">' + raw_html '</div>');
+					$('#discover_section').append('<div class="row-fluid">' + raw_html + '</div>');
 					raw_html = '';
 				}
 				
