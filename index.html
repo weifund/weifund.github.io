@@ -255,13 +255,12 @@
                             <input type="text" id="name" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Campain Name">
                             <br><br><br>
                             <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
-                            <br><br><br>
-                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" style="max-width: 220px; margin-right: 10px;" placeholder="End Date">
-                            <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" style="max-width: 220px;" placeholder="Goal (i.e. 200 WEI)">
+                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" style="max-width: 48%;  margin-top: 10px; margin-right: 2%;" placeholder="End Date">
+                            <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" style="max-width: 48%; margin-top: 10px;" placeholder="Goal (i.e. 200 WEI)">
                             <br><br><br><br>
-                            <input type="text" id="address" class="form-control" aria-describedby="sizing-addon1" placeholder="Benificiary Address">
+                            <input type="text" id="address" class="form-control" aria-describedby="sizing-addon1" placeholder="Benificiary Address" style="margin-top: 10px;">
                             <br><br><br>
-                            <select id="category" class="form-control" aria-describedby="sizing-addon1" >
+                            <select id="category" class="form-control"  style="margin-top: 10px;" aria-describedby="sizing-addon1" >
                             	<option>Category</option>
                             	<option value="0">Small Buisness</option>
                             	<option value="1">Technology</option>
@@ -279,7 +278,7 @@
                             	<option value="13">Politics</option>
                             </select>
                             <br><br><br><br>
-                            <a href="#new" id="start_campain" class="btn btn-primary btn-lg" onClick="new_campaign();"><span class="network-name">Start your Campain!</span></a>
+                            <a href="#new" id="start_campain" class="btn btn-primary btn-lg" onClick="new_campaign();" style="margin-top: 20px;"><span class="network-name">Start your Campain!</span></a>
                      </div>
                      
                      <div id="campaign_success_wrapper" style="margin-top: 60px; display: none;"> <!-- style="display: none;"-->
