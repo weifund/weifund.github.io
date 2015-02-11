@@ -147,6 +147,8 @@ function new_campaign()
 	var c_timelimit = new Date(String($('#timelimit').val())).getTime();	
 	var accounts = web3.eth.accounts;
 	
+	alert(accounts[0]);
+	
 	if(String(c_beneficiary) == "" || c_beneficiary == undefined){
 		c_beneficiary = accounts[0];
 	}
@@ -155,9 +157,18 @@ function new_campaign()
 		return false;
 	}
 	
-	var new_camp = contract.transact({from: accounts[0], gas:"500000", gasprice:"5000"}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category);
+	alert('Befroe New Camp!');
+	
+	var new_camp = contract.transact({from: accounts[0], gas:"1250"}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category);
+	
+	
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
+	
+	alert(get_camp_id);
+	
 	var campaign = loadCampaign(get_camp_id);
+	
+	alert(campaign);
 	
 	if(campaign !== false)
 	{
