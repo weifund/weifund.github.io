@@ -25,7 +25,7 @@
 	
 	alert(accounts[0]);
 	
-	var new_camp = contract.transact({gas: "50000", gasprice: "5000"}).newCampaign("Nicks Campaign", "nickscampaign.com", accounts[0], 4500, 1023823498234, 1);
+	var new_camp = contract.transact({gas: "50000", gasprice: "5000"}).newCampaign("Nicks Campaign", "nickscampaign.com", accounts[0], String(4500), String(1023823498234), 1);
 	
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
 	
