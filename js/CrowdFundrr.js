@@ -149,7 +149,7 @@ function new_campaign()
 		return false;
 	}
 	
-	var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category); //parseInt(c_timelimit)
+	var new_camp = contract.transact({from: accounts[0]}).newCampaign(c_name, c_website, c_beneficiary, c_goal, c_timelimit, c_category);
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
 	var campaign = loadCampaign(get_camp_id);
 	
