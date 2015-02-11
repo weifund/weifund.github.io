@@ -29,7 +29,7 @@
 	
 	var get_camp_id = contract.call().getUserLatest(accounts[0]);
 	
-	var raw_campaign = contract.call().getCampaign(parseInt(get_camp_id));
+	var raw_campaign = contract.call().getCampaign(String(get_camp_id));
 	
 	alert(raw_campaign);
     
