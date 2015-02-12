@@ -26,6 +26,17 @@
 		font-weight: lighter;
 	}
 	
+	#new_campaign_form
+	{
+		min-height: 650px;
+	}
+	
+	@media screen and (max-width: 1000px){
+	   #new_campaign_form
+	   {
+	   	min-height: 350px;
+	   }
+	}
 	</style>
     
     <!-- Custom Fonts -->
@@ -248,7 +259,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-5 col-sm-6" style="min-height: 650px;">
+                <div class="col-lg-5 col-sm-6" id="new_campaign_form">
                 
                 	<div id="new_campaign_wrapper" class="input-group input-group-lg" style="margin-top: 60px;">
                         <h2>Start Your Campaign</h2>
