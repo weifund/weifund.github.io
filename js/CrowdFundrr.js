@@ -238,7 +238,7 @@ function most_recent(load_max)
 		var total_campaigns = contract.call().getNumCampaigns();
 		total_campaigns = parseInt(total_campaigns);
 		
-		if(total_campaigns != 0 && total_campaigns > load_max)
+		if(total_campaigns != 0)
 		{
 			$('#most_recent_campaigns').empty();
 			
