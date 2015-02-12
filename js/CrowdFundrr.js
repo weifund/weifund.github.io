@@ -277,10 +277,14 @@ function hash_verified(owner_addr, website_url)
 
 function clearDiscover()
 {
-	$('#discover_display_row_1').css('display', 'none');
-	$('#discover_display_row_1').hide();
-	$('#discover_display_row_2').css('display', 'none');
-	$('#discover_display_row_2').hide();
+	var total_campaigns = contract.call().getNumCampaigns();
+	
+	if(total_campaigns != undefined && total_campaigns != 0){
+		$('#discover_display_row_1').css('display', 'none');
+		$('#discover_display_row_1').hide();
+		$('#discover_display_row_2').css('display', 'none');
+		$('#discover_display_row_2').hide();
+	}
 }
 
 function address_picker(el_id)
