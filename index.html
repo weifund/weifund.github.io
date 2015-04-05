@@ -1,492 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="img/crowdfundrr_logo.png">
-
-    <title>WeiFund - A Decentralized Open-Source Crowdfunding Platform</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-    <!--<link href="css/landing-page.css" rel="stylesheet">-->
-    
-    <link href="css/datepicker.css" rel="stylesheet">
-    
-    <style type="text/css">
-	.light
-	{
-		font-weight: lighter;
-	}
-	
-	#new_campaign_form
-	{
-		min-height: 650px;
-	}
-	
-	@media screen and (max-width: 1000px){
-	   #new_campaign_form
-	   {
-	   	min-height: 350px;
-	   }
-	}
-	</style>
-    
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    
-    <script type="text/javascript" src="js/lib/bignumber.js/bignumber.min.js"></script>
-    <script type="text/javascript" src="js/lib/ethereum.js"></script>
-    <script type="text/javascript" src="js/CrowdFundrr.js"></script>
-    
-    <script type="text/javascript">
-    var qs = (function(a) {
-	    if (a == "") return {};
-	    var b = {};
-	    for (var i = 0; i < a.length; ++i)
-	    {
-	        var p=a[i].split('=', 2);
-	        if (p.length == 1)
-	            b[p[0]] = "";
-	        else
-	            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-	    }
-	    return b;
-	})(window.location.search.substr(1).split('&'));
-	
-    if(qs["id"] != undefined)
-    {
-    	window.location.replace("tracker.html?id=" + String(qs["id"]));
-    }
-    	
-    </script>
-    
-    <!-- Contract Code Basics
-    	var eth = web3.eth;
-	var contractAbi = [];
-	var contractAddr = "0x6465940d1a1a7901f89476ff87a945e0fb1d07db";
-	var contract = eth.contract(contractAddr, contractAbi);
-	
-	// New Campaign Transaction
-	// newCampaign(string32 name, string32 website, address beneficiary, uint goal, uint timelimit)
-	// contract.transact().newCampaign("My Great Campaign"
-	// , "mygreatcampaign.com", "0x6465940d1a1a7901f89476ff87a945e0fb1d07db", 50000, 4232408243);
-	
-	// Contribute to Campaign
-	// contribute(uint campaignID)
-	// contract.transact({value: 34598}).newCampaign();
-	
-	// Check Goal Reached
-	// checkGoalReached(uint campaignID) returns (bool reached) 
-	// contract.transact().checkGoalReached(campaignID);
-	
-	// Get Number of Campaigns
-	// get_numCampaigns() returns (uint r_numCampaigns)
-	// var get_numCampaigns = contract.call().get_numCampaigns();
-	
-	// Get Campaign Function (uint ID)
-	var getCampaign = contract.call().getCampaign(34827423);
-
-	var number = web3.eth.number;
-	var info = web3.eth.block(number);
-	
-	// contract.transact({from: addr2, value: 100000}).join(addr1);-->
-
-</head>
-
-<body>
-
-    <script type="text/javascript">
-    	load_contract();
-    </script>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="index.html#"><h4 style="margin: 0px;">WeiFund <i class="glyphicon text-primary glyphicon-upload"></i></h4></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="discover.html">Discover</a>
-                    </li>
-                    <li>
-                        <a href="index.html#new">Start</a>
-                    </li>
-                    <li>
-                        <a href="index.html#services">About</a>
-                    </li>
-                    <li>
-                        <a href="index.html#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="SeventyTwo - Premium Coming Soon Template">
+		<meta name="author" content="http://choco-pixel.com">
+		<title>WeiFund - A Decentralized Crowdfunding Platform</title>
+		
+		<!-- Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
+		<link href="css/ladda-themeless.min.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/owl.carousel.css" rel="stylesheet">
+		<link href="css/owl.theme.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.png" type="image/x-icon">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status" class="text-center">
+				<div class="spinner">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Main -->
+		<section class="main text-center" id="home">
+			<div class="page">
+				<div class="wrapper">
+					<div class="container">
+						<img src="img/logo/WeiFundSmall.png" alt="Logo">
 
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
+						<h1 class="heading">coming soon</h1>
+						<p>
+							A non-profit, decentralized crowdfunding platform built on Ethereum.
+						</p>
+						<div class="row" style="display: none">
+							<div id="countdown"></div>
+						</div>
+						<!-- Subscription form -->
+						<!--<form class="form-inline signup" action="php/signupForm.php" role="form" id="signupForm">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email address">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
+							</div>
+						</form>-->
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Bring your creative project to life</h1>
-                        <h3>Next generation crowdfunding is here.</h3>
-                        <hr class="intro-divider">
-                                <a href="#new" class="btn btn-primary  btn-lg"><span class="network-name">Start a Campaign</span></a>
-                        <!--<ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>-->
-                    </div>
-                </div>
-            </div>
+						<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+							<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline signup" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll">
 
-        </div>
-        <!-- /.container -->
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
 
-    </div>
-    <!-- /.intro-header -->
+									<div class="mc-field-group">
+										<input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address">
+										<button type="submit"  name="subscribe" class="btn btn-theme ladda-button" id="mc-embedded-subscribe"  data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
+									</div>
+								</div>
+							</form>
+						</div>
 
-    <!-- Page Content -->
+						<!--End mc_embed_signup-->
 
-	<a  name="services"></a>
-    <div class="content-section-a">
+						<!-- Begin MailChimp Signup Form -->
+						<!--<div id="mc_embed_signup">
+							<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f"  role="form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline signup" target="_blank" novalidate>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr style="margin-top: 75px;" class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">A Better Way To Crowdfund</h2>
-                    <p class="lead">WeiFund is a free to use, totally open-source crowdfunding platform built on Ethereum.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
-            </div>
+								<div  id="mc_embed_signup_scroll">
+								<div class="form-group">
+									<input type="email" name="email" class="form-control" id="mce-EMAIL" placeholder="Email address">
+								</div>
+								<div class="form-group" style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left" id="mc-embedded-subscribe"><span class="ladda-label">Get notified!</span></button>
+								</div>
+								<div id="mce-responses" class="clear">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
 
-        </div>
-        <!-- /.container -->
+								<!--<div id="mc_embed_signup_scroll">
+									<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+										<div class="mc-field-group form-group">
+											<input type="email" value="" name="Email Address" class="required form-control" id="mce-EMAIL">
+										</div>
+									</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 
-    </div>
-    <!-- /.content-section-a -->
+									<!--<button type="submit"  name="subscribe" class="btn btn-theme ladda-button" id="mc-embedded-subscribe" data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
+								</div>
+							</form>
+						</div>-->
 
-    <div class="content-section-b">
+						<!--End mc_embed_signup-->
 
-        <div class="container">
+						<footer class="text-center">
+							<div class="social">
+								<a href="https://facebook.com/weifund" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+								<a href="https://twitter.com/weifund" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+								<a href="https://google.com/weifund" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								<a href="https://github.com/weifund" class="btn btn-theme"><i class="fa fa-github"></i></a>
+								<a href="https://linkedin.com/company/weifund" class="btn btn-theme"><i class="fa fa-linkedin"></i></a>
+							</div>
+						</footer>
+					</div>
+					<div class="arrow-down">
+						<a class="scroll" href="#about" id="scroll"><i class="fa fa-angle-double-down"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- About -->
+		<section id="about" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">About</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="lead">
+							<strong>WeiFund</strong> is a decentralized, non-profit, open-source crowdfunding platform that can be extended to create and connect with any token or share system you can imagine.
+						</p>
+						<p>What if crowdfunding contributions could be turned into contractually backed equity shares or custom tokens? Where support for a company, project or idea can be converted into real digital assets. WeiFund makes possible, all this and more. A free, open-source and secure platform to crowdfund your projects within the Ethereum ecosystem.
+						</p>
+						<div class="row">
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown">
+									<div class="icon">
+										<i class="fa fa-rocket"></i>
+									</div>
+									<div class="description">
+										<h4>Crowdfunding</h4>
+										<p>Start, discover, operate and contribute to
+											crowdfunding campaigns.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown" data-wow-delay="0.2s">
+									<div class="icon">
+										<i class="fa fa-cogs"></i> 
+									</div>
+									<div class="description">
+										<h4>Token & Share Systems</h4>
+										<p>Turn campaign contributions into real digital equity shares,
+										tokens or what ever you can imagine.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown" data-wow-delay="0.4s">
+									<div class="icon">
+										<i class="fa fa-heart"></i>
+									</div>
+									<div class="description">
+										<h4>Our Philosophy</h4>
+										<p>Make crowdfunding as free, open, secure and extendable
+										as possible.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Team -->
+		<section id="team" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">Our team</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-container">
+				<div id="teamCarousel" class="owl-carousel text-center">
 
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr style="margin-top: 60px;" class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Built on <a href="http://www.ethereum.org">Ethereum</a></h2>
-                    <p class="lead">WeiFund is proudly build with Ethereum, a decentralized open-source consensus ecosystem that enables a more free and secure internet.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/eth.png" alt="">
-                </div>
-            </div>
+					<div class="text-center team-member-container wow fadeInDown">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/nickdodson.jpeg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Nick Dodson</h4>
+								<span class="team-member-profession">Founder</span>
+								<p>Crypto-developer specializing in open-source decentralized applications.</p>
+								<div class="social">
+									<a href="http://facebook.com/iamnickdodson" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="http://twitter.com/iamnickdodson" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="http://github.com/silentcicero" class="btn btn-theme"><i class="fa fa-github"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-        </div>
-        <!-- /.container -->
+					<div class="text-center team-member-container wow fadeInDown">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/joeldietz.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Joel Dietz</h4>
+								<span class="team-member-profession">Advisor</span>
+								<p><a href="https://developer.salesforce.com/page/Joel_Dietz_Success_Story">Open source maverick</a>, author <a href="https://github.com/fractastical/distributed-governance/blob/master/whitepaper.md">distributed governance whitepaper</a>,
+co-founder <a href="https://www.youtube.com/user/EtherCasts">Ethercasts</a>, founder <a href="http://Swarm.fund">Swarm.fund</a></p>
+								<div class="social">
+									<a href="https://www.facebook.com/joel.a.dietz" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="https://twitter.com/fractastical" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="https://github.com/fractastical" class="btn btn-theme"><i class="fa fa-github"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-    </div>
-    <!-- /.content-section-b -->
+					<!--<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/2.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Jessica Smith</h4>
+								<span class="text-muted team-member-profession">Designer</span>
+								<p>Sed posuere eu sem ac consectetur. Integer suscipit diam odio, in tincidunt dui aliquet eget.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.4s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/3.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Tom Wilson</h4>
+								<span class="team-member-profession">CEO</span>
+								<p>Vivamus dapibus placerat tincidunt. 
+									Donec sit amet justo eget dolor vehicula tincidunt eu ut est.
+								</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.6s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/4.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Sophie Brown</h4>
+								<span class="team-member-profession">Product manager</span>
+								<p>Phasellus malesuada augue erat, quis mollis magna fermentum at. Donec lobortis ante et dictum.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center team-member-container wow fadeInDown">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/1.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>John Doe</h4>
+								<span class="team-member-profession">Developer</span>
+								<p>Fusce pulvinar dui eu dignissim semper. Donec non tellus felis. Vivamus dapibus placerat.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/2.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Jessica Smith</h4>
+								<span class="text-muted team-member-profession">Designer</span>
+								<p>Sed posuere eu sem ac consectetur. Integer suscipit diam odio, in tincidunt dui aliquet eget.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.4s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/3.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Tom Wilson</h4>
+								<span class="team-member-profession">CEO</span>
+								<p>Vivamus dapibus placerat tincidunt. 
+									Donec sit amet justo eget dolor vehicula tincidunt eu ut est.
+								</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</section>
+		
+		<!-- Contact -->
+		<section id="contact" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">Contact</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<p>
+							Please feel free to <strong>contact us</strong>, we would love to talk or skype
+							with you. We respond within 24 hours,
+							thank you.
+						</p>
+						<ul class="list-contacts">
+							<!--<li><i class="fa fa-phone"></i> (123) 456-7890</li>
+							<li><i class="fa fa-mobile-phone"></i> (123) 987-6543</li>-->
+							<li><i class="fa fa-skype"></i> SilentCicero (Nick Dodson) </li>
+							<li><i class="fa fa-map-marker"></i> 2080 Avenue Road<br> Toronto, CA M5M2L7</li>
+							<li><i class="fa fa-envelope-o"></i> <a href="mailto:info@seventytwo.com">mail@weifund.io</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-6">
+						<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+							<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=e3b5380bd6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form form-horizontal" class="validate" target="_blank" novalidate  role="form">
+								<div id="mc_embed_signup_scroll">
 
-    <div class="content-section-a">
+									<!--<div class="mc-field-group">
+										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+									</div>
 
-        <div class="container">
+									<div class="mc-field-group">
+										<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+									</div>
 
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr  class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Philosophy</h2>
-                    <p class="lead">Our philosophy is simple: clean design, totally decentralized, 100% open-sourced, minimalist, no fee, light, and reactive.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/open-source.png" alt="">
-                </div>
-            </div>
+									<div class="mc-field-group">
+										<input type="text" value="" name="MMERGE3" class="required" id="mce-MMERGE3">
+									</div>
 
-        </div>
-        <!-- /.container -->
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div> 
 
-    </div>
-    <!-- /.content-section-a -->
+									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_e3b5380bd6" tabindex="-1" value=""></div>
 
-	<a  name="new"></a>
-    <div class="content-section-b">
+									<div class="clear">
+										<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+									</div>-->
 
-        <div class="container">
+									<div id="mce-responses" class="clear">
+										<div class="response" id="mce-error-response" style="display:none"></div>
+										<div class="response" id="mce-success-response" style="display:none"></div>
+									</div> 
 
-            <div class="row">
-                <div class="col-lg-5 col-sm-6" id="new_campaign_form">
-                
-                	<div id="new_campaign_wrapper" class="input-group input-group-lg" style="margin-top: 60px;">
-                        <h2>Start Your Campaign</h2>
-                         <p class="lead">Fill out your project details below and get crowdfunding!</p>
-                        
-                            <!--<input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" placeholder="Category">-->
-                            
-                            <input type="text" id="name" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Campaign Name">
-                            <br><br><br>
-                            <input type="text" id="website" pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/" maxlength="32" class="form-control" aria-describedby="sizing-addon1" placeholder="Website">
-                            <input type="text" id="timelimit"  class="form-control datepicker" aria-describedby="sizing-addon1" style="max-width: 49%;  margin-top: 10px; margin-right: 2%;" placeholder="End Date">
-                            <input type="number" id="goal" min="1" class="form-control" aria-describedby="sizing-addon1" style="max-width: 49%; margin-top: 10px;" placeholder="Goal (e.g. 200 Ether)">
-                            <br><br><br><br>
-                            <input type="text" id="address" class="form-control" aria-describedby="sizing-addon1" placeholder="Benificiary Address" style="margin-top: 10px;">
-                            <br><br><br>
-                            <select id="category" class="form-control"  style="margin-top: 10px;" aria-describedby="sizing-addon1" >
-                            	<option>Category</option>
-                            	<option value="0">Small Buisness</option>
-                            	<option value="1">Technology</option>
-                            	<option value="2">Music</option>
-                            	<option value="3">Arts</option>
-                            	<option value="4">Cryptocurrency</option>
-                            	<option value="5">Dance</option>
-                            	<option value="6">Fashion</option>
-                            	<option value="7">Film</option>
-                            	<option value="8">Community</option>
-                            	<option value="9">Food</option>
-                            	<option value="10">Games</option>
-                            	<option value="11">Education</option>
-                            	<option value="12">Cause</option>
-                            	<option value="13">Politics</option>
-                            </select>
-                            <br><br><br><br>
-                            <a href="#new" id="start_campain" class="btn btn-primary btn-lg" onClick="new_campaign();" style="margin-top: 20px;"><span class="network-name">Start your Campaign!</span></a>
-                     </div>
-                     
-                     <div id="campaign_success_wrapper" style="margin-top: 60px; display: none;"> <!-- style="display: none;"-->
-                        <h2>Your Campaign Has Started</h2>
-                        
-                        <!--
-                        string32 r_name
-                        , string32 r_website
-                        , address r_benificiary
-                        , uint r_fundingGoal
-                        , uint r_numFunders
-                        , uint r_amount
-                        , uint r_timelimit
-                        , address r_owner
-                        , uint r_ownerNumCampaigns
-                        , hash r_verifier
-                        
-                        show campaign_success_wrapper
-                        hide campaign_details
-                        show new_campaign_success_2
-                        
-                        new_campaign_name
-                        new_campaign_name HREF 
-                        new_campaign_id
-                        new_campaign_url_1 http://www.crowdfundrr.github.io/?id=1
-                        new_campaign_goto tracker.html?id=1
-                        new_campaign_website http://www.kipoh.com
-                        
-                        CONTROLLER NEEDED
-                        
-                        campaign_embed_1
-                        campaign_embed_2
-                        campaign_embed_3
-                        
-                        new_campaign_embed
-                        -->
-                    
-                        <div style="margin-top: 40px;">
-                            <h2 style="margin-top: 0px;"><a href="tracker.html?id=1" class="light" id="new_campaign_name">Johns New Campaign</a> has started</h2>
-                            <h4><span class="light">Campaign ID #</span><strong id="new_campaign_id">1</strong></h4>
-                            
-                            <h3 style="margin-top: 60px;">Your Campaign URL:</h3>
-                            <input type="text" id="new_campaign_url_1" style="border-radius: 5px;" class="form-control" onClick="this.setSelectionRange(0, this.value.length)" value="http://www.crowdfundrr.github.io/?id=1"> 
-                            <!-- End of URL -->
-                        
-                            <br><br><br>
-                            
-                            <a href="tracker.html?id=1" id="new_campaign_goto" id="start_campain" class="btn btn-primary btn-lg"><span class="network-name">Goto My Campaign</span></a>
-                            
-                        </div>
-                        <!--<br><br><br><br><br> <div class="glyphicon text-primary glyphicon-upload" style="font-size: 400px;"></div>-->
-                     
-                     </div>
-                </div>
-                
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6" style="min-height: 650px;">
-                	<div id="campaign_details" style="padding-top: 60px;">
-                         <h2 style="margin-bottom: 25px;">Details</h2>
-                         <p class="lead"> •&nbsp;&nbsp;&nbsp;All funds are in Ether denominations</p>
-                         <p class="lead"> •&nbsp;&nbsp;&nbsp;If your campaign goal is not reached by the alloted time period, all ether is returned to the respective funders</p>
-                         <p class="lead"> •&nbsp;&nbsp;&nbsp;If your campaign goal is reached, the funds will be avilable to the benificiary</p>
-                         <p class="lead"> •&nbsp;&nbsp;&nbsp;Please make sure your campaign name and website url are below 32 characters</p>
-                         <p class="lead"> •&nbsp;&nbsp;&nbsp;A link and id will be provided after your campaign is started, use these to promote your campaign</p>
-                     </div>
-                     
-                     <div id="new_campaign_success_2" style="margin-top: 50px; display: none;">
-                            
-                        <h3>Dont Forget to Add Your Campaign Image</h3>
-                        
-                        <div class="panel panel-default cf-panel">
-                            <div class="panel-heading">Upload a 500px by 300px PNG image titled "crowdfundrr.png" (without the qoutes) to your website's main directory.</div>
-                            <div class="panel-body" style="background-color: #FFFFFF;">
-                                <h4 style="margin: 0px; background-color: #FFFFFF;"><span id="new_campaign_website" class="light" style="background-color: #FFFFFF;">http://www.kipoh.com</span><strong style="background-color: #FFFFFF;">/crowdfundrr.png</strong></h4>
-                            </div>
-                            <div class="panel-footer">**Note, this is the image that will be used on crowdfundrr.</div>
-                        </div>
-                        
-                        <h3 style="margin-top: 40px;">Embed your Campaign Link</h3>
-                        <div class="panel panel-default cf-panel">
-                            <div class="panel-heading text-center">
-                                <a href="#new" id="campaign_embed_1" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_20.png"></a>
-                                <a href="#new" id="campaign_embed_2" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_100.png"></a>
-                                <a href="#new" id="campaign_embed_3" style="color: #333333;"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="img/crowdfundrr_150.png"></a>
-                            </div>
-                            <div class="panel-body"><textarea id="new_campaign_embed" style="border-radius: 5px;" class="form-control" onClick="this.setSelectionRange(0, this.value.length)"><a href="http://www.crowdfundrr.github.io?id=1"><img style="border: 3px solid #999; border-radius: 5px; margin-right: 10px;" src="http://crowdfundrr.github.io/img/crowdfundrr_20.png"></a></textarea>
-                            
-                                
-                            </div>
-                        </div> 
-                        <!-- End of Embed-->
-                    </div> <!-- End of NEw Success 2 -->
-                     
-                </div>
-                
-                <!--<div class="col-lg-5" style="min-height: 650px; padding-top: 40px;">
-                    <img class="img-responsive" src="img/girl1.png" style="margin-top: 40px;" alt="">
-                    <br>
-                   	 <p class="lead">Crowdfunder is also available on the Ethereum mobile app.</p>
-                </div>-->
-            </div>
+									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_e3b5380bd6" tabindex="-1" value=""></div>
 
-            <!--<div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Built on <a href="http://www.ethereum.org">Ethereum</a></h2>
-                    <p class="lead">Crowdfunder is entirely built on Ethereum, a decentralized open-source ecosystem that enables a more free and secure internet.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/eth.png" alt="">
-                </div>
-            </div>-->
+									<div class="form-group">
+										<div class="col-sm-6">
+											<input type="text" name="FNAME" class="form-control" id="mce-FNAME"  placeholder="Name">	
+										</div>
+										<div class="col-sm-6">
+											<input type="text" name="EMAIL" class="form-control"  id="mce-EMAIL" placeholder="Email">
+										</div>
+									</div>
 
-        </div>
-        <!-- /.container -->
+									<br />
 
-    </div>
-    <!-- /.content-section-b -->
+									<br />
 
-	<a  name="contact"></a>
-    <div class="banner">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<textarea name="MMERGE3" class="form-control" rows="8" placeholder="Message"  id="mce-MMERGE3"></textarea>
+										</div>
+									</div>
 
-        <div class="container">
+									<div class="form-group" >
+										<div class="col-sm-12">
+											<button type="submit" style="margin-top: 10px;" name="subscribe" id="mc-embedded-subscribe" class="btn btn-theme ladda-button" data-style="expand-left">
+												<span class="ladda-label">Submit</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect With The Team</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/CrowdFundrr" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+						<!--End mc_embed_signup-->
 
-        </div>
-        <!-- /.container -->
 
-    </div>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="discover.html">Discover</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="index.html#new">Start</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="index.html#services">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="index.html#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; WeiFund 2014. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <script src="js/bootstrap-datepicker.js"></script>
-    
-    <script type="text/javascript">
-    	address_picker('#address');
-	 $('#timelimit').datepicker({
-	    startDate: '+3d'
-	});
-    </script>
-
-</body>
-
+						<!--<form class="form-horizontal" action="php/contactForm.php" method="post" role="form" id="contactForm">
+							<div class="form-group">
+								<div class="col-sm-6">
+									<input type="text" name="name" class="form-control" placeholder="Name">	
+								</div>
+								<div class="col-sm-6">
+									<input type="text" name="contactEmail" class="form-control" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<textarea name="message" class="form-control" rows="8" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left">
+										<span class="ladda-label">Submit</span>
+									</button>
+								</div>
+							</div>
+						</form>-->
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/jquery.tubular.1.0.js"></script>
+		<script src="js/bootstrapValidator.min.js"></script>
+		<script src="js/validator/emailAddress.js"></script>
+		<script src="js/spin.min.js"></script>
+		<script src="js/ladda.min.js"></script>
+		<script src="js/retina.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/init.js"></script>
+	</body>
 </html>
