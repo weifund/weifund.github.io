@@ -36,10 +36,12 @@
     <![endif]-->
     
     <style type="text/css">
+	
 	.light
 	{
 		font-weight: lighter;
 	}
+	
 	</style>
 
 </head>
