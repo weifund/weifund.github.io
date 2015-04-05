@@ -1,8 +1,8 @@
-# crowdfundrr.github.io
-Crowdfundrr Website
+# weifund.github.io
+WeiFund Website
 
 View the site here:
-http://crowdfundrr.github.io
+http://weifund.github.io
 
-Main Crowdfundrr REPO:
-http://github.com/crowdfundrr/crowdfundrr
+Main WeiFund REPO:
+http://github.com/weifund/weifund
