@@ -261,7 +261,7 @@ co-founder <a href="https://www.youtube.com/user/EtherCasts">Ethercasts</a>, fou
 					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
 						<div class="team-member">
 							<div class="team-member-img">
-								<img src="img/portraits/joris.jpg" alt="Joris Bontje - Decentralized Autonomous Technologist" class="img-responsive" style="min-width: 220px; height: auto;">
+								<img src="img/portraits/joris.jpg" alt="Joris Bontje - Decentralized Autonomous Technologist" class="img-responsive" style="width: 220px; height: auto;">
 							</div>
 							<div class="team-member-meta">
 								<h4>Joris Bontje</h4>
