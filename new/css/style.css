@@ -7,6 +7,8 @@
        
 
     old color: 337ab7
+
+#a7afb8;
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600);
 /*--------------base-------
@@ -19,7 +21,7 @@ body {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #a7afb8;
+  color: #ddd;
   -webkit-font-smoothing: antialiased; }
 
 /*typography bootstrap overrides*/
@@ -51,7 +53,7 @@ p {
   line-height: 25px;
   font-weight: 400;
   font-size: 13px;
-  color: #a7afb8; }
+  color: #888; }
 
 a {
   background: transparent;
