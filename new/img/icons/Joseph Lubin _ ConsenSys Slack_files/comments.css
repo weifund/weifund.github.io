@@ -1,0 +1,110 @@
+@font-face{font-family:appleLogo;src:local("Lucida Grande");unicode-range:U+F8FF}
+.helvetica{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif}
+.lato{font-family:Lato,appleLogo,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
+.lato_black{font-family:Lato,appleLogo,sans-serif;font-weight:900}
+.lato_bold{font-family:Lato,appleLogo,sans-serif;font-weight:700}
+.lato_regular{font-family:Lato,appleLogo,sans-serif;font-weight:500}
+.lato_light{font-family:Lato,appleLogo,sans-serif;font-weight:300}
+.monospace{font-family:Monaco,Menlo,Consolas,"Courier New",monospace!important}
+@-webkit-keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+@-moz-keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+@keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+.transparent{color:transparent!important}
+.transparent_bg{background-color:transparent!important}
+.flexpane_grey_bg{background-color:#f7f7f7!important}
+.neutral_white{color:#fff!important}
+.neutral_white_bg{background-color:#fff!important}
+.neutral_grey{color:#fbfbfa!important}
+.indifferent_grey{color:#555459!important}
+.indifferent_grey_bg{background-color:#555459!important}
+.charcoal_grey{color:#434245!important}
+.subtle_silver{color:#9e9ea6!important}
+.subtle_silver_bg{background-color:#9e9ea6!important}
+.soft_grey{color:#e8e8e8!important}
+.soft_grey_bg{background-color:#e8e8e8!important}
+.severe_grey{color:#3d3c40!important}
+.severe_grey_bg{background-color:#3d3c40!important}
+.dull_grey{color:#8b898f!important}
+.dull_grey_bg{background-color:#8b898f!important}
+.plastic_grey{color:#88919b!important}
+.plastic_grey_bg{background-color:#88919b!important}
+.cloud_silver{color:#babbbf!important}
+.cloud_silver_bg{background-color:#babbbf!important}
+.warm_white{color:#fbfaf8!important}
+.warm_white_bg{background-color:#fbfaf8!important}
+.cloud_white{color:#f2f2f5!important}
+.cloud_white_bg{background-color:#f2f2f5!important}
+.seafoam_green{color:#2ab27b!important}
+.seafoam_green_bg{background-color:#2ab27b!important}
+.clear_blue{color:#439fe0!important}
+.clear_blue_bg{background-color:#439fe0!important}
+.solid_blue{color:#2780f8!important}
+.solid_blue_bg{background-color:#2780f8!important}
+.candy_red{color:#eb4d5c!important}
+.candy_red_bg{background-color:#eb4d5c!important}
+.candy_red_on_hover:hover{color:#eb4d5c!important}
+.highlight_yellow_bg{background-color:#fffce0!important}
+.mention_yellow_bg{background-color:#fff3b8!important}
+.star_yellow{color:#fc0!important}
+.star_yellow_bg{background-color:#fc0!important}
+.yolk_orange{color:#edb431!important}
+.yolk_orange_bg{background-color:#edb431!important}
+.thrills_purple{color:#7d60c5!important}
+.burnt_violet{color:#4d394b!important}
+.burnt_violet_bg{background-color:#4d394b!important}
+.ocean_teal{color:#4c9689!important}
+.ocean_teal_bg{background-color:#4c9689!important}
+.havana_blue{color:#2a80b9!important}
+.havana_blue_bg{background-color:#2a80b9!important}
+.pale_blue{color:#f0f7fb!important}
+.pale_blue_bg{background-color:#f0f7fb!important}
+.sky_blue{color:#439fe0!important}
+.sky_blue_bg{background-color:#439fe0!important}
+.slate_blue{color:#3c4b5b!important}
+.slate_blue_bg{background-color:#3c4b5b!important}
+.muddy_lilac{color:#937e91!important}
+.muddy_lilac_bg{background-color:#937e91!important}
+.moscow_red,.moscow_red_on_hover:hover{color:#cb5234!important}
+.moscow_red_bg{background-color:#cb5234!important}
+.moscow_red_dark{color:#870000!important}
+.moscow_red_dark_bg{background-color:#870000!important}
+.mustard_yellow{color:#dfa941!important}
+.mustard_yellow_bg{background-color:#dfa941!important}
+.kelly_green{color:#36a64f!important}
+.kelly_green_dark{color:#257337!important}
+.kelly_green_bg{background-color:#36a64f!important}
+.channel_page_blue{color:#2d9cf5!important}
+.pin_orange{color:#ff876d!important}
+.dropbox_blue{color:#007ee5!important}
+.dropbox_blue_bg{background-color:#007ee5!important}
+.twitter_blue{color:#55acee!important}
+.twitter_blue_bg{background-color:#55acee!important}
+.gdrive_blue_bg{background-color:#4285f4!important}
+.screenhero_blue{color:#1a9cdb!important}
+.screenhero_blue_bg{background-color:#1a9cdb!important}
+.comment{margin:0 0 1rem;padding-left:46px;font-family:Lato,appleLogo,sans-serif;-webkit-font-smoothing:antialiased;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text}
+.comment .member_image,.comment_form .member_image{float:left;margin:0 0 0 -46px}
+.comment .member{font-weight:900;padding-right:.25rem;color:#3d3c40!important;font-size:15px}
+.comment_meta{font-size:.8rem;line-height:1.1rem!important;margin-bottom:0rem;color:#babbbf}
+.comment .star{margin:0 .25rem}
+.comment .special_formatting_quote .content,.comment_body{margin:0;font-size:15px;line-height:20px!important;word-wrap:break-word;max-width:460px;color:#3d3c40}
+.comment_form,.edit_comment_form{margin-bottom:2.5rem}
+.comment_actions{position:relative;display:none;color:#babbbf;font-size:13px}
+.comment:hover .comment_actions{display:inline}
+.comment_actions:hover{color:#555459}
+.file_comment_tip{font-size:.7rem;margin-top:-.25rem}
+.icon_quote{color:#EBEDED;font-size:1.8rem;line-height:50px}
+#flex_contents .comment_form{width:100%;padding-left:46px}
+#flex_contents .edit_comment_form{width:100%}
+#flex_contents .comment_form textarea,#flex_contents .edit_comment_form textarea{width:100%;height:100px;color:#3d3c40;font-size:15px}
+#flex_contents .comment_form textarea.autogrow-short,#flex_contents .edit_comment_form textarea.autogrow-short{height:19px;box-shadow:none}
+#file_page .comment_form,#post_page .comment_form{padding-left:46px;margin-bottom:4rem}
+.container #file_page .comment_form,.container #post_page .comment_form{width:505px}
+.container #file_page #file_edit_comment_form,.container #post_page #file_edit_comment_form{width:460px}
+#file_page .comment_form textarea,#post_page .comment_form textarea{height:102px;min-height:102px;font-size:15px}

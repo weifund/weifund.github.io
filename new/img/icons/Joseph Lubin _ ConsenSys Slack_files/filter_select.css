@@ -1,0 +1,127 @@
+.transparent{color:transparent!important}
+.transparent_bg{background-color:transparent!important}
+.flexpane_grey_bg{background-color:#f7f7f7!important}
+.neutral_white{color:#fff!important}
+.neutral_white_bg{background-color:#fff!important}
+.neutral_grey{color:#fbfbfa!important}
+.indifferent_grey{color:#555459!important}
+.indifferent_grey_bg{background-color:#555459!important}
+.charcoal_grey{color:#434245!important}
+.subtle_silver{color:#9e9ea6!important}
+.subtle_silver_bg{background-color:#9e9ea6!important}
+.soft_grey{color:#e8e8e8!important}
+.soft_grey_bg{background-color:#e8e8e8!important}
+.severe_grey{color:#3d3c40!important}
+.severe_grey_bg{background-color:#3d3c40!important}
+.dull_grey{color:#8b898f!important}
+.dull_grey_bg{background-color:#8b898f!important}
+.plastic_grey{color:#88919b!important}
+.plastic_grey_bg{background-color:#88919b!important}
+.cloud_silver{color:#babbbf!important}
+.cloud_silver_bg{background-color:#babbbf!important}
+.warm_white{color:#fbfaf8!important}
+.warm_white_bg{background-color:#fbfaf8!important}
+.cloud_white{color:#f2f2f5!important}
+.cloud_white_bg{background-color:#f2f2f5!important}
+.seafoam_green{color:#2ab27b!important}
+.seafoam_green_bg{background-color:#2ab27b!important}
+.clear_blue{color:#439fe0!important}
+.clear_blue_bg{background-color:#439fe0!important}
+.solid_blue{color:#2780f8!important}
+.solid_blue_bg{background-color:#2780f8!important}
+.candy_red{color:#eb4d5c!important}
+.candy_red_bg{background-color:#eb4d5c!important}
+.candy_red_on_hover:hover{color:#eb4d5c!important}
+.highlight_yellow_bg{background-color:#fffce0!important}
+.mention_yellow_bg{background-color:#fff3b8!important}
+.star_yellow{color:#fc0!important}
+.star_yellow_bg{background-color:#fc0!important}
+.yolk_orange{color:#edb431!important}
+.yolk_orange_bg{background-color:#edb431!important}
+.thrills_purple{color:#7d60c5!important}
+.burnt_violet{color:#4d394b!important}
+.burnt_violet_bg{background-color:#4d394b!important}
+.ocean_teal{color:#4c9689!important}
+.ocean_teal_bg{background-color:#4c9689!important}
+.havana_blue{color:#2a80b9!important}
+.havana_blue_bg{background-color:#2a80b9!important}
+.pale_blue{color:#f0f7fb!important}
+.pale_blue_bg{background-color:#f0f7fb!important}
+.sky_blue{color:#439fe0!important}
+.sky_blue_bg{background-color:#439fe0!important}
+.slate_blue{color:#3c4b5b!important}
+.slate_blue_bg{background-color:#3c4b5b!important}
+.muddy_lilac{color:#937e91!important}
+.muddy_lilac_bg{background-color:#937e91!important}
+.moscow_red,.moscow_red_on_hover:hover{color:#cb5234!important}
+.moscow_red_bg{background-color:#cb5234!important}
+.moscow_red_dark{color:#870000!important}
+.moscow_red_dark_bg{background-color:#870000!important}
+.mustard_yellow{color:#dfa941!important}
+.mustard_yellow_bg{background-color:#dfa941!important}
+.kelly_green{color:#36a64f!important}
+.kelly_green_dark{color:#257337!important}
+.kelly_green_bg{background-color:#36a64f!important}
+.channel_page_blue{color:#2d9cf5!important}
+.pin_orange{color:#ff876d!important}
+.dropbox_blue{color:#007ee5!important}
+.dropbox_blue_bg{background-color:#007ee5!important}
+.twitter_blue{color:#55acee!important}
+.twitter_blue_bg{background-color:#55acee!important}
+.gdrive_blue_bg{background-color:#4285f4!important}
+.screenhero_blue{color:#1a9cdb!important}
+.screenhero_blue_bg{background-color:#1a9cdb!important}
+@font-face{font-family:appleLogo;src:local("Lucida Grande");unicode-range:U+F8FF}
+.helvetica{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif}
+.lato{font-family:Lato,appleLogo,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}
+.lato_black{font-family:Lato,appleLogo,sans-serif;font-weight:900}
+.lato_bold{font-family:Lato,appleLogo,sans-serif;font-weight:700}
+.lato_regular{font-family:Lato,appleLogo,sans-serif;font-weight:500}
+.lato_light{font-family:Lato,appleLogo,sans-serif;font-weight:300}
+.monospace{font-family:Monaco,Menlo,Consolas,"Courier New",monospace!important}
+@-webkit-keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+@-moz-keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+@keyframes progress_bar{from{background-position:0 0}
+to{background-position:-56px 0}
+}
+.filter_select.default_style{position:relative;display:block;font-weight:400}
+.filter_select.default_style.disabled{pointer-events:none;background:#f9f9f9}
+.filter_select.default_style.disabled input.fsl_input{background:#f9f9f9}
+.filter_select.default_style input.fsl_input{border:none;font:400 1rem Lato,appleLogo,sans-serif;outline:0;display:inline-block;width:auto;padding:.45rem .75rem .55rem .4rem;box-shadow:none!important;margin:0;vertical-align:top}
+.filter_select.default_style .fsl_input_container{border:1px solid #C5C5C5;font:400 1rem Lato,appleLogo,sans-serif;position:relative;border-radius:3px;display:block;width:100%;cursor:text;padding:1px}
+.filter_select.default_style .fsl_input_container.active,.filter_select.default_style .fsl_input_container:hover{border-color:#2780f8}
+.filter_select.default_style .fsl_input_container.active{box-shadow:0 0 7px rgba(39,128,248,.15)}
+.filter_select.default_style .fsl_input_container.empty .fsl_input{width:100%}
+.filter_select.default_style .fsl_list_container{display:none;position:absolute;z-index:100;width:100%;max-height:250px;top:100%;left:0;overflow:auto;margin-top:3px;border:1px solid #d8d8d8;border-radius:4px;background:#FFF;box-shadow:0 0 3px rgba(0,0,0,.1);padding:4px 3px 4px 4px}
+.filter_select.default_style .fsl_list_container.visible{display:block}
+.filter_select.default_style .fsl_list_container.empty{font-size:.85rem;text-align:center}
+.filter_select.default_style .fsl_scroller{width:100%!important}
+.filter_select.default_style .fsl_list{margin-right:1px}
+.filter_select.default_style .fsl_list .fsl_group,.filter_select.default_style .fsl_list .fsl_item{padding:.3rem;font-size:.85rem;line-height:1rem}
+.filter_select.default_style .fsl_list .fsl_group{font-weight:700}
+.filter_select.default_style .fsl_list .fsl_item{cursor:pointer;border:1px solid transparent;border-radius:2px}
+.filter_select.default_style .fsl_list .fsl_item.group_item{margin-left:.3rem}
+.filter_select.default_style .fsl_list .fsl_item.selected{color:#2780f8}
+.filter_select.default_style .fsl_list .fsl_item.disabled{color:#9e9ea6}
+.filter_select.default_style .fsl_list .fsl_item.active{background-color:#EDF7FD;border-color:#D3ECFA}
+.filter_select.default_style .fsl_token{display:inline-block;margin:.4rem 0 0 .4rem;padding:3px 24px 3px 5px;border:1px solid #439FE0;border-radius:3px;background:#439FE0;color:#FFF;cursor:pointer;font-size:.85rem;font-weight:700;position:relative;top:-2px;vertical-align:middle}
+.filter_select.default_style .fsl_token:after{content:'\00D7';font-weight:400;color:#FFF;display:inline-block;margin-left:8px;font-size:1.3rem;line-height:1rem;position:absolute;right:4px;top:2px}
+.is_apple_webkit .filter_select.default_style .fsl_token:after{top:3px}
+.filter_select.default_style .fsl_paginate{text-align:center;font-size:.75rem;margin:.5rem 0}
+.filter_select.default_style .fsl_paginate span{display:inline-block;margin:0 .25rem}
+.filter_select.default_style .fsl_paginate[data-pages="1"]{display:none}
+.filter_select.default_style .fsl_paginate .fsl_paginate_back,.filter_select.default_style .fsl_paginate .fsl_paginate_forward{cursor:pointer;color:#2780f8;vertical-align:middle}
+.filter_select.default_style.single .fsl_input_container:after{content:"\E271";font-family:Slack;position:absolute;right:.7rem;top:4px;font-size:20px;pointer-events:none}
+.filter_select.default_style.single .fsl_input_container.active:after,.filter_select.default_style.single .fsl_input_container:hover:after{color:#2780f8}
+.filter_select.default_style.single .fsl_input,.filter_select.default_style.single .fsl_input_container{cursor:default}
+.filter_select.default_style.single .fsl_input{padding-left:8px}
+.filter_select.default_style.single.value .active .fsl_value,.filter_select.default_style.single.value .fsl_input{display:none}
+.filter_select.default_style.single.value .active .fsl_input{display:block}
+.filter_select.default_style.single:not(.value) .fsl_value{display:none}
+.filter_select.default_style .fsl_value{padding:.45rem .75rem .55rem 8px}
+.filter_select.default_style .fsl_token .addl_text,.filter_select.default_style .fsl_value .addl_text{display:none}
+label.select[data-filter-select]:after,label[data-filter-select] select,select[data-filter-select]{min-height:39px;visibility:hidden}
