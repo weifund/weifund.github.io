@@ -1,530 +1,1067 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="A non-profit, decentralized, open source crowdfunding platform built on Ethereum.">
-		<meta name="author" content="http://nickdodson.com">
-		<title>WeiFund - A Decentralized Crowdfunding Platform</title>
-		
-		<!-- Stylesheets -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
-		<link href="css/ladda-themeless.min.css" rel="stylesheet">
-		<link href="css/animate.min.css" rel="stylesheet">
-		<link href="css/owl.carousel.css" rel="stylesheet">
-		<link href="css/owl.theme.css" rel="stylesheet">
-		<link href="css/app.css" rel="stylesheet">
-		
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
-		<link rel="icon" href="img/favicon/favicon.png" type="image/x-icon">
-		
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<script src="js/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKR859"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WKR859');</script>
-		<!-- End Google Tag Manager -->
-
-		<!-- Preloader -->
-		<div id="preloader">
-			<div id="status" class="text-center">
-				<div class="spinner">
-				  <div class="rect1"></div>
-				  <div class="rect2"></div>
-				  <div class="rect3"></div>
-				  <div class="rect4"></div>
-				  <div class="rect5"></div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Main -->
-		<section class="main text-center" id="home">
-			<div class="page">
-				<div class="wrapper">
-					<div class="container">
-						<img src="img/logo/WeiFundSmall.png" alt="Logo">
+    <head>
+        <title>WeiFund - Crowdfunding Decentralized</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--bootstrap css-->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--custom css-->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+         <!--video player css css-->
+        <link href="css/YTPlayer.css" rel="stylesheet" type="text/css">
+        <!--flex slider css-->
+        <link href="css/flexslider.css" rel="stylesheet">
+        <!--google web fonts css-->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,800' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        
+        <!-- icons css-->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!--animated css-->
+        <link href="css/animate.css" rel="stylesheet">
+        <!--owl carousel css-->
+        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target="#navigation" data-offset="80">
 
 
-						<h1 class="heading">coming soon</h1>
-						<p>
-							A non-profit, decentralized crowdfunding platform built on Ethereum.
-						</p>
-						<div class="row" style="display: none">
-							<div id="countdown"></div>
-						</div>
-						<!-- Subscription form -->
-						<!--<form class="form-inline signup" action="php/signupForm.php" role="form" id="signupForm">
-							<div class="form-group">
-								<input type="email" name="email" class="form-control" placeholder="Email address">
-							</div>
-							<div class="form-group">
-								<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
-							</div>
-						</form>-->
+        <section id="home" class="home-video full-screen-dem" data-stellar-background-ratio="0.5">
+            <div class="parallax-overlay"></div> 
+              <a id="video" class="player" data-property="{videoURL:'http://youtu.be/kvJxX7fk0gI',containment:'#home', showControls:true, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
 
-						<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup">
-							<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline signup" target="_blank" novalidate>
-								<div id="mc_embed_signup_scroll">
+            <div class="home-content text-center">
+                <div class="container">
+                    <h1 class=" slide-logo">
+                        <img src="img/WeiFundSmall.png" />
+                    </h1>
+                    <div class="main-flex-slider">
+                        <ul class="slides">
+                            <li>
+                                <h1>LET'S DECENTRALIZE CROWDFUNDING</h1>
 
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
+                            </li>
+                            <li>
+                                <h1>equity share issuance</h1>
 
-									<div class="mc-field-group">
-										<input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address">
-										<button type="submit"  name="subscribe" class="btn btn-theme ladda-button" id="mc-embedded-subscribe"  data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
-									</div>
-								</div>
-							</form>
-						</div>
+                            </li>
+                            <li>
+                                <h1>completly extensible</h1>
+                            </li>
+                        </ul>
+                    </div> 
+                    <h2 class="slide-btm-text">
+                        Built on Ethereum
+                    </h2>
+                    <div class="home-arrow-down text-center">
+                        <p class="scrollto">
+                            <a href="#about" class="btn btn-lg 
+                                                    btn-theme-color">
+                                let's Start
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="navigation">
+           <div class="navbar navbar-default navbar-static-top sticky" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">
+                            <img src="img/weifundblack.png" style="max-height: 55px; width: auto; margin-top: -18px;" />
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse">
 
-						<!--End mc_embed_signup-->
+                        <ul class="nav navbar-nav navbar-right scrollto">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#how">How It Works</a></li>
+                            <li><a href="#services">Features</a></li>
+                            <li><a href="#work">Screens</a></li>
+                            <li><a href="http://medium.com/@WeiFund" target="_blank">Blog</a></li>
+                            <li><a href="#alpha">Alpha</a></li>
+                            <li><a href="#contact">Contact</a></li>
 
-						<!-- Begin MailChimp Signup Form -->
-						<!--<div id="mc_embed_signup">
-							<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f"  role="form" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline signup" target="_blank" novalidate>
+                        </ul>
 
-								<div  id="mc_embed_signup_scroll">
-								<div class="form-group">
-									<input type="email" name="email" class="form-control" id="mce-EMAIL" placeholder="Email address">
-								</div>
-								<div class="form-group" style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
-								<div class="form-group">
-									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left" id="mc-embedded-subscribe"><span class="ladda-label">Get notified!</span></button>
-								</div>
-								<div id="mce-responses" class="clear">
-								<div class="response" id="mce-error-response" style="display:none"></div>
-								<div class="response" id="mce-success-response" style="display:none"></div>
-								</div>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container -->
+            </div>
+        </section><!--navigation section end here-->
+        <section id="about" class="padding-80" style=" padding-bottom: 0px;">
 
-								<!--<div id="mc_embed_signup_scroll">
-									<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-										<div class="mc-field-group form-group">
-											<input type="email" value="" name="Email Address" class="required form-control" id="mce-EMAIL">
-										</div>
-									</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <!--about page content-->
+            <div class="about-section">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title">
+                            <span>
+                                Decentralize Everything
+                            </span>
+                        </h4>
+                        <h2 class="large section-title">
+                            About us
+                        </h2>
+                    </div><!--section heading-->             
 
-									<!--<button type="submit"  name="subscribe" class="btn btn-theme ladda-button" id="mc-embedded-subscribe" data-style="expand-left"><span class="ladda-label">Get notified!</span></button>
-								</div>
-							</form>
-						</div>-->
+                </div><!--container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="about-box wow animated fadeInDown" data-wow-duration="0.3s">
+                                <div class="about-box-icon">
+                                    <i class="fa fa-line-chart"></i>
+                                </div>
+                                <div class="about-box-text">
+                                    <h4>Crowdfunding</h4>
+                                    <p>WeiFund leverages web3 enabled technology to provide a comprehensive crowdfunding solution on the Ethereum ecosystem.
+                                    </p>
+                                </div>
+                            </div><!--about us box end-->
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="about-box wow animated fadeInDown" data-wow-delay="0.5">
+                                <div class="about-box-icon">
+                                    <i class="fa fa-balance-scale"></i>
+                                </div>
+                                <div class="about-box-text">
+                                    <h4>Equity & Token Systems</h4>
+                                    <p>
+                                        WeiFund is extensible and can interact with any compatible token or equity system. This means campaign contributions can be turned into shares or tokens securely and reliably.
+                                    </p>
+                                </div>
+                            </div><!--about us box end-->
+                        </div>
+                    </div><!--about services row end--> 
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="about-box wow animated fadeInDown" data-wow-delay="0.6s">
+                                <div class="about-box-icon">
+                                    <i class="fa fa-lightbulb-o"></i>
+                                </div>
+                                <div class="about-box-text">
+                                    <h4>Our Philosophy</h4>
+                                    <p>
+                                       We take the approach that WeiFund will be one of many crowdfunding platforms on Web3. Our goal is to stimulate these platforms by providing world-class open-source modular and extensible crowdfunding utilities that everyone can access.
+                                    </p>
+                                </div>
+                            </div><!--about us box end-->
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="about-box wow animated fadeInDown" data-wow-delay="0.8s">
+                                <div class="about-box-icon">
+                                    <i class="fa fa-cog"></i>
+                                </div>
+                                <div class="about-box-text">
+                                    <h4>Completly Decentralized</h4>
+                                    <p>
+                                        All critical aspects of the WeiFund platform are built on web 3.0 technologies. This means everything from the contributions to the software repositories are all within decentralized ecosystems that can function outside of web 2.0. 
+                                    </p>
+                                </div>
+                                <div style="display: block; height: 100px;"></div>
+                            </div><!--about us box end-->
+                        </div>
+                        
+                    </div><!--about services row end--> 
+                    <!--<div class="about-section-more">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="about-more-info wow animated fadeInUp" data-wow-delay="0.3s">
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="skills-wrapper wow animated bounceIn" data-wow-delay="0.6s">
+                                    <h3 class="heading-progress">Web Design <span class="pull-right">88%</span></h3>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 88%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" role="progressbar">
+                                        </div>
+                                    </div>
+                                    <h3 class="heading-progress">Web Development <span class="pull-right">78%</span></h3>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 78%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="78" role="progressbar">
+                                        </div>
+                                    </div>
+                                    <h3 class="heading-progress">Marketing <span class="pull-right">82%</span></h3>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 82%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="82" role="progressbar">
+                                        </div>
+                                    </div>                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row easy-pie-chart-row">
+                            <div class="col-sm-3 text-center">
+                                <div class="progress-circle">
 
-						<!--End mc_embed_signup-->
+                                    <div class="chart" data-percent="95" data-scale-color="#9eca45">
+                                        <span>95%</span>
+                                        <canvas height="120" width="120"></canvas>
+                                    </div>
+                                    <p class="progress-text">HTML5 / CSS3</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <div class="progress-circle">
 
-						<footer class="text-center">
-							<div class="social">
-								<a href="https://facebook.com/weifund" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-								<a href="https://twitter.com/weifund" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-								<a href="https://plus.google.com/115585706546158843009" rel="publisher" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								<a href="https://github.com/weifund" class="btn btn-theme"><i class="fa fa-github"></i></a>
-								<a href="https://linkedin.com/company/weifund" class="btn btn-theme"><i class="fa fa-linkedin"></i></a>
-							</div>
-						</footer>
-					</div>
-					<div class="arrow-down">
-						<a class="scroll" href="#about" id="scroll"><i class="fa fa-angle-double-down"></i></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- About -->
-		<section id="about" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="section-title">About</h3>
-						<div class="section-title-border"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<p class="lead">
-							<strong>WeiFund</strong> is a decentralized, non-profit, open-source crowdfunding platform that can be extended to create and connect with any token or share system you can imagine.
-						</p>
-						<p>What if crowdfunding contributions could be turned into contractually backed equity shares or custom tokens? Where support for a company, project or idea can be converted into real digital assets. WeiFund makes possible, all this and more. A free, open-source and secure platform to crowdfund your projects within the Ethereum ecosystem.
-						</p>
-						<div class="row">
-							<div class="col-sm-4 feature-box-container">
-								<div class="feature-box wow fadeInDown">
-									<div class="icon">
-										<i class="fa fa-rocket"></i>
-									</div>
-									<div class="description">
-										<h4>Crowdfunding</h4>
-										<p>Start, discover, operate and contribute to
-											crowdfunding campaigns.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4 feature-box-container">
-								<div class="feature-box wow fadeInDown" data-wow-delay="0.2s">
-									<div class="icon">
-										<i class="fa fa-cogs"></i> 
-									</div>
-									<div class="description">
-										<h4>Token & Share Systems</h4>
-										<p>Turn campaign contributions into real digital equity shares,
-										tokens or what ever you can imagine.
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4 feature-box-container">
-								<div class="feature-box wow fadeInDown" data-wow-delay="0.4s">
-									<div class="icon">
-										<i class="fa fa-heart"></i>
-									</div>
-									<div class="description">
-										<h4>Our Philosophy</h4>
-										<p>Make crowdfunding as free, open, secure and extendable
-										as possible.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- Team -->
-		<section id="team" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="section-title">Our team</h3>
-						<div class="section-title-border"></div>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-container">
-				<div id="teamCarousel" class="owl-carousel text-center">
+                                    <div class="chart" data-percent="85" data-scale-color="#9eca45">
+                                        <span>85%</span>
+                                        <canvas height="120" width="120"></canvas>
+                                    </div>
+                                    <p class="progress-text">WORDPRESS</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <div class="progress-circle">
 
-					<div class="text-center team-member-container wow fadeInDown">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/nickdodson.jpeg" alt="Nick Dodson - Crypto-developer specializing in open source decentralized applications." class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Nick Dodson</h4>
-								<span class="team-member-profession">Founder</span>
-								<p>Crypto-developer specializing in open-source decentralized applications.</p>
-								<div class="social">
-									<a href="http://facebook.com/iamnickdodson" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="http://twitter.com/iamnickdodson" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="http://github.com/silentcicero" class="btn btn-theme"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
+                                    <div class="chart" data-percent="75" data-scale-color="#9eca45">
+                                        <span>75%</span>
+                                        <canvas height="120" width="120"></canvas>
+                                    </div>
+                                    <p class="progress-text">Jquery</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <div class="progress-circle">
 
-					<div class="text-center team-member-container wow fadeInDown">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/joeldietz.jpg" alt="Joel Dietz - Open source maverick, author distributed governance whitepaper." class="img-responsive" width="220" height="220">
-							</div>
-							<div class="team-member-meta">
-								<h4>Joel Dietz</h4>
-								<span class="team-member-profession">Advisor</span>
-								<p><a href="https://developer.salesforce.com/page/Joel_Dietz_Success_Story">Open source maverick</a>, author <a href="https://github.com/fractastical/distributed-governance/blob/master/whitepaper.md">distributed governance whitepaper</a>,
-co-founder <a href="https://www.youtube.com/user/EtherCasts">Ethercasts</a>, founder <a href="http://Swarm.fund">Swarm.fund</a></p>
-								<div class="social">
-									<a href="https://www.facebook.com/joel.a.dietz" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="https://twitter.com/fractastical" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="https://github.com/fractastical" class="btn btn-theme"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
+                                    <div class="chart" data-percent="89" data-scale-color="#9eca45">
+                                        <span>89%</span>
+                                        <canvas height="120" width="120"></canvas>
+                                    </div>
+                                    <p class="progress-text">Photoshop</p>
+                                </div>
+                            </div>
 
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/joris.jpg" alt="Joris Bontje - Decentralized Autonomous Technologist" class="img-responsive" style="min-width: 220px; height: auto;">
-							</div>
-							<div class="team-member-meta">
-								<h4>Joris Bontje</h4>
-								<span class="team-member-profession">Advisor</span>
-								<p>Decentralized Autonomous Technologist. Big Data Hacker & <a href="https://github.com/jorisbontje/">Software Engineer</a>. Co-host at <a href="http://ethercasts.com">EtherCasts</a>. <a href="http://ethereum-buildboard.meteor.com/">Captain Obvious</a>.</p>
-								<div class="social">
-									<a href="https://www.linkedin.com/in/jorisbontje" class="btn btn-theme"><i class="fa fa-linkedin"></i></a>
-									<a href="https://twitter.com/mids106" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="https://github.com/jorisbontje/" class="btn btn-theme"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
+                        </div>
 
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/aaron.jpg" alt="Aaron Dais - Code composer. Creator of Vapor ethereum browser." class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Aaron Davis</h4>
-								<span class="team-member-profession">Advisor</span>
-								<p>Code composer. Creator of Vapor ethereum browser.</p>
-								<div class="social">
-									<a href="http://aaron.kumavis.me" class="btn btn-theme"><i class="fa fa-globe"></i></a>
-									<a href="https://twitter.com/aerinonfire" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="https://github.com/kumavis" class="btn btn-theme"><i class="fa fa-github"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
+                    </div><!--section about 3 end-->
+                </div>
+            </div>
 
-					<!--
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.4s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/3.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Tom Wilson</h4>
-								<span class="team-member-profession">CEO</span>
-								<p>Vivamus dapibus placerat tincidunt. 
-									Donec sit amet justo eget dolor vehicula tincidunt eu ut est.
-								</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.6s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/4.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Sophie Brown</h4>
-								<span class="team-member-profession">Product manager</span>
-								<p>Phasellus malesuada augue erat, quis mollis magna fermentum at. Donec lobortis ante et dictum.</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center team-member-container wow fadeInDown">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/1.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>John Doe</h4>
-								<span class="team-member-profession">Developer</span>
-								<p>Fusce pulvinar dui eu dignissim semper. Donec non tellus felis. Vivamus dapibus placerat.</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/2.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Jessica Smith</h4>
-								<span class="text-muted team-member-profession">Designer</span>
-								<p>Sed posuere eu sem ac consectetur. Integer suscipit diam odio, in tincidunt dui aliquet eget.</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-center team-member-container wow fadeInDown" data-wow-delay="0.4s">
-						<div class="team-member">
-							<div class="team-member-img">
-								<img src="img/portraits/3.jpg" alt="" class="img-responsive">
-							</div>
-							<div class="team-member-meta">
-								<h4>Tom Wilson</h4>
-								<span class="team-member-profession">CEO</span>
-								<p>Vivamus dapibus placerat tincidunt. 
-									Donec sit amet justo eget dolor vehicula tincidunt eu ut est.
-								</p>
-								<div class="social">
-									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
-									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
-									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>-->
-				</div>
-			</div>
-		</section>
-		
-		<!-- Contact -->
-		<section id="contact" class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="section-title">Contact</h3>
-						<div class="section-title-border"></div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<p>
-							Please feel free to <strong>contact us</strong>, we would love to talk or skype
-							with you. We respond within 24 hours,
-							thank you.
-						</p>
-						<ul class="list-contacts">
-							<!--<li><i class="fa fa-phone"></i> (123) 456-7890</li>
-							<li><i class="fa fa-mobile-phone"></i> (123) 987-6543</li>-->
-							
-							<li><i class="fa fa-google-plus"></i> <a href="https://plus.google.com/115585706546158843009" rel="publisher">Google+</a> </li>
-							<li><i class="fa fa-skype"></i> SilentCicero (Nick Dodson) </li>
-							<li><i class="fa fa-map-marker"></i> 2080 Avenue Road<br> Toronto, CA M5M2L7</li>
-							<li><i class="fa fa-envelope-o"></i> <a href="mailto:info@seventytwo.com">mail@weifund.io</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-6">
-						<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup">
-							<!--<form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=e3b5380bd6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form form-horizontal" class="validate" target="_blank" novalidate  role="form">
-								<div id="mc_embed_signup_scroll">
+            <div class="purchase-now parallax" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h1 class="wow animated fadeInLeft" data-wow-delay="0.3s"><strong>Crowdfunding</strong> that is <strong>modular</strong> and <strong>extensible</strong></h1>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="http://medium.com/@WeiFund" class="btn btn-lg btn-theme-color wow animated bounceIn" data-wow-delay="0.6s"> Checkout Our Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--page about content end here-->     
+            
+            <!--page about content end here-->  
+        </section>
+        <!--about section end here-->
 
-									<!--<div class="mc-field-group">
-										<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-									</div>
+        <!--section services start here-->
 
-									<div class="mc-field-group">
-										<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-									</div>
+        <section id="how" class="padding-80" style="background: #F1F1F1;">
+            <div class="services-section-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title"><span>But How?</span></h4>
+                        <h2 class="large section-title">How it Works</h2>
+                    </div><!--section heading-->             
 
-									<div class="mc-field-group">
-										<input type="text" value="" name="MMERGE3" class="required" id="mce-MMERGE3">
-									</div>
+                </div><!--container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="img/screen3.jpg" target="_blank">
+                                <img src="img/screen3.jpg" style="border: 1px solid #ddd; border-radius: 5px; padding: 10px; width: 100%; height: auto;" />
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="margin-btm-40">
+                                <br />
+                                <br />
+                                <h4>A Brief Overview</h4>
+                                <p>
+                                    To use the WeiFund decentralized app (dApp), users will first open WeiFund in a web 3.0 enabled browser such as Ethereum's Mist. A user would then immediately be able to start, contribute to, browse, and manage crowdfunding campaigns. WeiFund's interface and user experience will be very similar to that of conventional crowdfunding platforms such as Kickstarter or GoFundMe, however, all funds raised on WeiFund will be accounted for in the Ether digital-currency. Web 3.0 enabled browsers will come with their own wallet systems so that payments made on WeiFund to start and contribute to campaigns are done so in a secure and verifiable way.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div> 
-
-									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_e3b5380bd6" tabindex="-1" value=""></div>
-
-									<div class="clear">
-										<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-									</div>-->
-<!--
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div> 
-
-									<div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_e3b5380bd6" tabindex="-1" value=""></div>
-
-									<div class="form-group">
-										<div class="col-sm-6">
-											<input type="text" name="FNAME" class="form-control" id="mce-FNAME"  placeholder="Name">	
-										</div>
-										<div class="col-sm-6">
-											<input type="text" name="EMAIL" class="form-control"  id="mce-EMAIL" placeholder="Email">
-										</div>
-									</div>
-
-									<br />
-
-									<br />
-
-									<div class="form-group">
-										<div class="col-sm-12">
-											<textarea name="MMERGE3" class="form-control" rows="8" placeholder="Message"  id="mce-MMERGE3"></textarea>
-										</div>
-									</div>
-
-									<div class="form-group" >
-										<div class="col-sm-12">
-											<button type="submit" style="margin-top: 10px;" name="subscribe" id="mc-embedded-subscribe" class="btn btn-theme ladda-button" data-style="expand-left">
-												<span class="ladda-label">Submit</span>
-											</button>
-										</div>
-									</div>
-								</div>
-							</form>-->
-						</div>
-
-						<!--End mc_embed_signup-->
+        <section id="services" class="padding-80">
 
 
-						<!--<form class="form-horizontal" action="php/contactForm.php" method="post" role="form" id="contactForm">
-							<div class="form-group">
-								<div class="col-sm-6">
-									<input type="text" name="name" class="form-control" placeholder="Name">	
-								</div>
-								<div class="col-sm-6">
-									<input type="text" name="contactEmail" class="form-control" placeholder="Email">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<textarea name="message" class="form-control" rows="8" placeholder="Message"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-sm-12">
-									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left">
-										<span class="ladda-label">Submit</span>
-									</button>
-								</div>
-							</div>
-						</form>-->
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.backstretch.min.js"></script>
-		<script src="js/jquery.countdown.min.js"></script>
-		<script src="js/jquery.tubular.1.0.js"></script>
-		<script src="js/bootstrapValidator.min.js"></script>
-		<script src="js/validator/emailAddress.js"></script>
-		<script src="js/spin.min.js"></script>
-		<script src="js/ladda.min.js"></script>
-		<script src="js/retina.min.js"></script>
-		<script src="js/wow.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/init.js"></script>
-	</body>
+            <div class="services-section-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title"><span>The Rundown</span></h4>
+                        <h2 class="large section-title">Features</h2>
+                    </div><!--section heading-->             
+
+                </div><!--container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="margin-btm-40">
+                                <h4>Kickstarter In a Box</h4>
+                                <p>
+                                    With YouTube and Vimeo support, type categorization, trusted reviews, contribution limits, and secure money transfer mechanisms, WeiFund can be considered a Kickstarter in a box. Below is an overview of some of WeiFund's critical features. Please note, there will be many more to come!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 wow animated fadeInLeft" data-wow-delay="0.3s">
+
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-cogs"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Inherently Extensible</h3>
+                                        <p>
+                                            By design, the WeiFund core smart-contract is inherently extensible, which means it can be securely interdependent with other smart-contracts such as equity or token systems.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-video-camera"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Escrow Beneficiaries</h3>
+                                        <p>
+                                            Funds raised on WeiFund can be paid out to third-party actors or smart-contracts which enables campaigners with a comprehensive escrow solution.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-balance-scale"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Equity Share Enabled</h3>
+                                        <p>
+                                            Contributions received on WeiFund can be directly converted to tokens which can be traded immediately on a decentralized exchanges such as EtherEx.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                        </div>
+                        <div class="col-md-6 wow animated fadeInRight" data-wow-delay="0.6s">
+
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-thumbs-o-up"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Low Fees</h3>
+                                        <p>
+                                            The only fees associated with operating a crowdfunding campaign on WeiFund are the transaction fees to notate the campaigns and contributions on the Ethereum blockchain. WeiFund charges no additional fees on top.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-check-circle-o"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Open-Source</h3>
+                                        <p>
+                                            All of WeiFund's components are completely open-source, modular and extensible.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                            <div class="row margin-btm-20">
+                                <div class="col-md-2">
+                                    <div class="services-icon">
+                                        <i class="fa fa-lock"></i>
+                                    </div> 
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="services-info">
+                                        <h3>Safe & Secure</h3>
+                                        <p>
+                                            Because all transactions are handled on the Ethereum smart-contract platform, all contributions, refunds and payouts are as secured by the network and the power of cryptography, which is as or more secure than any conventional crowdfunding utility.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!--.services row end-->
+                        </div>
+                    </div>
+                </div>
+                
+                <br />
+                <br />
+                <br />
+            </div><!--services section 1 end-->
+            
+            
+            <div class="services-section-2 parallax" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">                        
+                        <div id="mc_embed_signup" 
+                             class="col-md-12 text-center">
+                            <h1>Get News & Updates</h1>
+                            <form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div class="row">
+                                    <div class="col-sm-4 col-sm-offset-4">
+                                        <div class="input-group">
+                                            <label class="sr-only" for="subscribe-email">Email address</label>
+                                            <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email"  id="mce-EMAIL">
+                                            <div id="mce-responses" class="clear">
+                                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                                <div class="response" id="mce-success-response" style="display:none"></div>
+                                            </div>
+                                            <div style="position: absolute; left: -5000px;">
+                                                <input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
+                                            <span class="input-group-btn">
+                                                <input type="submit" value="OK" name="subscribe" id="mc-embedded-subscribe" class="btn btn-lg btn-theme-color">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!--services section 1 end-->
+            
+            <!-- Begin MailChimp Signup Form -->
+            <!--<div id="mc_embed_signup">
+                <form action="//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe to our mailing list</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5fd10dccde0a9e8f200ae4e44_6c94b8c26f" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+            </div>-->
+            <!--End mc_embed_signup-->
+            
+            
+            <div class="services-section-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        
+                        <br /><br /><br /><br /> <br /> 
+                        
+                        <h4 class="small section-title"><span>The Benefits</span></h4>
+                        <h2 class="large section-title">Why Use WeiFund?</h2>
+                    </div><!--section heading-->             
+
+                </div><!--container-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="margin-btm-40">
+                                <h4>For Campaigners</h4>
+                                <p>
+                                    Unlike conventional crowdfunding services like Kickstarter, WeiFund is part of a smart-contract network, which means donations can actually be turned into complex agreements like equity share or product rebate issuance and management systems. This gives campaign operators a broader range of possibilities when they are raising funds for their project or organization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="margin-btm-40">
+                                <h4>For Contributors</h4>
+                                <p>
+                                    Many WeiFund contributors will be receiving digital assets in return for their contributions. These digital assets can be tradable and are securely verified by the smart-contracts around them. For example, contributors can potentially be issued equity shares to a DAO, and then trade those shares on a decentralized exchange in seconds. This is not possible with any crowdfunding platform that exists today and is the direct by-product of these new web 3.0 enabled technologies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                        <br /><br /><br /><br /> 
+            </div><!--services section 1 end-->
+            
+
+            <div class="purchase-now parallax" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h1 class="wow animated fadeInLeft" data-wow-delay="0.3s">Turn <strong>contributions</strong> into <storng>equity tokens on the fly</storng></h1>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://medium.com/@weifund" class="btn btn-lg btn-theme-color wow animated bounceIn" data-wow-delay="0.6s"> Checkout Our Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!--section services end here-->
+
+
+
+
+        <!--our work section start here-->
+        <section id="work" class="padding-80">
+
+            <div class="work-section-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title">
+                            <span>What It Looks Like</span>
+                        </h4>
+                        <h2 class="large section-title">Screens</h2>
+                    </div><!--section heading-->
+                </div>                
+                <div class="container">
+                    <!--<ul class="filter list-inline">
+                        <li><a class="active" href="#" data-filter="*">Show All</a></li>
+                        <li><a href="#" data-filter=".photography">Photography</a></li>
+                        <li><a href="#" data-filter=".illustration">illustration</a></li>
+                        <li><a href="#" data-filter=".branding">branding</a></li>
+                        <li><a href="#" data-filter=".web-design">web design</a></li>
+                    </ul>-->
+                    <div class="row">
+                        <div class="portfolio-box iso-call work-col-4">
+                            <div class="project-post photography branding">
+                                <a href="img/screen1.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen1.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    <div class="work-sesc">
+                                        <p>
+                                            Landing Page
+                                        </p>
+                                    </div><!--.work-desc-->
+                            </div><!--project post-->
+                            <div class="project-post illustration web-design">
+                               <a  href="img/screen2.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen2.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    <div class="work-sesc">
+                                        <p>
+                                            Contribution Systems
+                                        </p>
+                                    </div><!--.work-desc-->
+                            </div><!--project post-->
+                            <div class="project-post photography web-design">
+                               <a href="img/screen3.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen3.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    <div class="work-sesc">
+                                        <p>
+                                            Browsing
+                                        </p>
+                                    </div><!--.work-desc-->
+                            </div><!--project post-->
+
+                            <div class="project-post branding">
+                                <a href="img/screen4.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen4.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    </a>
+                                    <div class="work-sesc">
+                                        <p>
+                                            Start Campaigns
+                                        </p>
+                                    </div><!--.work-desc-->
+                            </div><!--project post-->
+                                
+                                
+                            <div class="project-post illustration web-design">
+                               <a  href="img/screen5.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen5.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    <div class="work-sesc">
+                                        <p>
+                                            Admin Dashboard
+                                        </p>
+                                    </div><!--.work-desc-->
+                            </div><!--project post-->
+                                
+                                
+                            <div class="project-post illustration web-design">
+                               <a  href="img/screen6.jpg" target="_blank">
+                                        <div class="image-wrapper">
+                                            <img src="img/screen6.jpg" class="img-responsive" alt="work-1">
+                                            <div class="image-overlay">
+                                                <p>
+                                                    View Detail
+                                                </p>
+                                            </div><!--.image-overlay-->
+                                        </div><!--.image-wrapper-->                                      
+                                    <div class="work-sesc">
+                                        <p>
+                                            WeiCoin Token Builder
+                                        </p>
+                                    </div><!--.work-desc-->
+                                </a>
+                            </div><!--project post-->
+                            
+                        </div>
+                    </div>
+                    
+                        
+                    <br /><br /><br /><br /> <br /> 
+                </div><!--container-->
+
+
+            </div><!--work section 1-->
+                        
+            <!--testimonials-->
+               <div class="testi parallax " data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center">
+                            <div id="testi-carousel" class="owl-carousel">
+                                <div>
+                                    <img src="img/icons/joe.jpg" alt="">
+                                    <h4>
+                                        Decentralized crowdfunding and equity crowdfunding on WeiFund will enable any project or business on the planet to grow its stakeholder pool early in the project and draw from a population of seven billion potential participants.
+                                    </h4>
+                                    <p>Joseph Lubin - <a href="http://ethereum.org" target="_blank">Ethereum</a> & <a href="http://consensys.net" target="_blank">ConsenSys</a>  Founder</p>
+                                </div><!--testimonials item like paragraph-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--testimonials-->
+            <div class="work-section-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center margin-btm-40">
+                            <div class="section-heading text-center">
+                                <h4 class="small section-title"><span>Super creative heroes</span></h4>
+                                <h2 class="large section-title">Our team</h2>
+                            </div>
+                        </div>                                            
+                    </div><!--.row-->
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="person">
+                                <img src="img/team/nick.jpg" class="img-responsive" alt="">
+                                <div class="person-desc">
+                                    <h4>Nick Dodson</h4>
+                                    <em>Founder, Lead Developer</em>
+                                    <p>
+                                        Crypto-developer specializing in open-source decentralized applications.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!--team-col-->
+                        <div class="col-sm-3">
+                            <div class="person">
+                                <img src="img/team/joris.jpg" class="img-responsive" alt="">
+                                <div class="person-desc">
+                                    <h4>Joris Bontje</h4>
+                                    <em>Technical Advisor</em>
+                                    <p>
+                                        Decentralized Autonomous Technologist. Big Data Hacker &amp; <a href="https://github.com/jorisbontje/">Software Engineer</a>. Co-host at <a href="http://ethercasts.com">EtherCasts</a>. <a href="http://ethereum-buildboard.meteor.com/">Captain Obvious</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!--team-col-->
+                        <div class="col-sm-3">
+                            <div class="person">
+                                <img src="img/team/massi.jpg" class="img-responsive" alt="">
+                                <div class="person-desc">
+                                    <h4>Massimiliano Terzi</h4>
+                                    <em>Software Engineer</em>
+                                    <p>
+                                        Financial analyst with a passion for programming and technology. Bitcoin adopter, early Ethereum enthusiast. WeiLend founder</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="person">
+                                <img src="img/team/aaron.jpg" class="img-responsive" alt="">
+                                <div class="person-desc">
+                                    <h4>Aaron Davis</h4>
+                                    <em>Technical Advisor</em>
+                                    <p>
+                                        Code composer. Creator of MetaMask Ethereum browser.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!--team-col-->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="person">
+                                <img src="img/team/joel.jpg" class="img-responsive" alt="">
+                                <div class="person-desc">
+                                    <h4>Joel Dietz</h4>
+                                    <em>Advisor</em>
+                                    <p>
+                                        <a href="https://developer.salesforce.com/page/Joel_Dietz_Success_Story">Open source maverick</a>, author <a href="https://github.com/fractastical/distributed-governance/blob/master/whitepaper.md">distributed governance whitepaper</a>,
+co-founder <a href="https://www.youtube.com/user/EtherCasts">Ethercasts</a>, founder <a href="http://Swarm.fund">Swarm.fund</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!--team-col-->
+                    </div>
+                </div><!--.container-->
+            </div><!--team section end-->
+            <!--fun facts-->
+            <!--<div class=" fun-facts parallax" id="numbers" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 margin-btm-20">
+                            <div class="fact-inner">
+                                <h2 class="counter">34565</h2>
+                                <h4>Projects Complete</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 margin-btm-20">
+                            <div class="fact-inner">
+                                <h2 class="counter">1599</h2>
+                                <h4>Happy Customers</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 margin-btm-20">
+                            <div class="fact-inner">
+                                <h2 class="counter">99999</h2>
+                                <h4>Songs Listen</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 margin-btm-20">
+                            <div class="fact-inner">
+                                <h2 class="counter">1255</h2>
+                                <h4>Cups of coffee</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--fun facts-->
+        </section><!--#work-section-->
+
+        <section id="alpha" class="padding-80" style="background: #F1F1F1;">
+            <div class="services-section-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title"><span>Visual Demos and Alpha's</span></h4>
+                        <h2 class="large section-title">How It Feels</h2>
+                    </div><!--section heading-->             
+
+                </div><!--container-->
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="margin-btm-40">
+                                <h4>Visual Demo</h4>
+                                <p>
+                                    This is a visual demo of the early WeiFund alpha UI that you can run in any browser. It should give you a taste of the WeiFund design and interface.
+                                    
+                                    <br /><br />
+                                    
+                                    <label>Website Demo</label>
+                                    <br />
+                                    <a href="/demo/" target="_blank">weifund.io/demo</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="margin-btm-40">
+                                <h4>The Alpha</h4>
+                                <p>
+                                    The alpha is currently only available for developers. You can access it here:
+                                    
+                                    <br /><br />
+
+                                    <label>Alpha Repository</label> 
+                                    <br />                                                  <a href="http://github.com/WeiFund/WeiFund" target="_blank">github.com/WeiFund/WeiFund</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+           </section>
+
+        <!--our work section end-->
+
+        <div class="purchase-now parallax" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h1 class="wow animated fadeInLeft" data-wow-delay="0.3s">Completely <strong>decentralized</strong> crowdfunding</h1>
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="http://twitter.com/WeiFund" class="btn btn-lg btn-theme-color wow animated bounceIn" target="_blank" data-wow-delay="0.6s"> Follow Us on Twitter 
+                        <i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="contact" class="padding-80">
+
+
+            <div class="contact-sec-1">
+                <div class="container">
+                    <div class="section-heading text-center">
+                        <h4 class="small section-title"><span>we would love to hear from you  </span></h4>
+                        <h2 class="large section-title">Contact Us</h2>
+                    </div><!--section heading-->
+                </div><!--.container-->
+                <div class="container">
+                    <div class="row">
+                        <!--<div class="col-md-8">
+                            <h4>Get in touch</h4>
+                            <form name="sentMessage" id="contactForm" method="post" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row control-group">
+                                            <div class="form-group col-xs-12 controls">
+                                                <label>Name<span>*</span></label>
+                                                <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                                <p class="help-block"></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="row control-group">
+                                            <div class="form-group col-xs-12 controls">
+                                                <label>Email Address<span>*</span></label>
+                                                <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                                <p class="help-block"></p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 controls">
+                                        <label>Message<span>*</span></label>
+                                        <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                        <p class="help-block"></p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div id="success"></div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <button type="submit" class="btn btn-theme-color btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                            <!--contact form-->
+                        <div class="col-md-4">
+                            <h4>Contact info</h4>
+                            <div class="contact-info wow animated fadeInRight" data-wow-delay=".6s">
+                                <p><i class="fa fa-user"></i> Active Contact: Nick Dodson</p>
+                                <p><i class="fa fa-envelope"></i> <a href="#">mail@weifund.io</a></p>
+                                <p><i class="fa fa-clock-o"></i> Monday-Friday 9:30-5:30pm</p>
+                                <hr>
+                                <h4>Elsewhere</h4>
+                                <ul class="list-inline social-colored"> 
+                                    <li><a href="http://facebook.com/weifund"><i class="fa fa-facebook icon-fb" data-toggle="tooltip" title="" data-original-title="Facebook" data-placement="top"></i></a></li>
+                                    <li><a href="http://twitter.com/weifund"><i class="fa fa-twitter icon-twit" data-toggle="tooltip" title="" data-original-title="Twitter" data-placement="top"></i></a></li>
+                                    <li><a href="http://linkedin.com/company/weifund"><i class="fa fa-linkedin icon-in" data-toggle="tooltip" title="" data-original-title="Linkedin" data-placement="top"></i></a></li>
+
+                                </ul> <!--colored social-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Contact-sec-1 end-->
+
+        </section><!--contact section end-->
+        <!--<div id="map-canvas" style="width:100%; height: 350px;"></div>
+        <div class="contact-sec-2">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="contact-col wow animated flipInY" data-wow-delay=".3s">
+                            <i class="fa fa-phone"></i>
+                            <p>+91 0141 123456789</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-col wow animated flipInY" data-wow-delay=".3s">
+                            <i class="fa fa-envelope"></i>
+                            <p>mail@Domain.com</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-col wow animated flipInY" data-wow-delay=".3s">
+                            <i class="fa fa-home"></i>
+                            <p>124,munnawali jaipur<br>302012, india</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--Contact-sec-1 end-->
+
+
+        <section id="footer" class="padding-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 copyright">
+                        <span>&copy;2015 WeiFund. All rights reserved</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6 footer-nav">
+                        <ul class="list-inline">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="https://medium.com/@weifund">Our Blog</a></li>
+                            <li><a href="http://twitter.com/WeiFund">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><!--footer end-->
+        <!--back to top-->
+        <a href="#" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+        <!--back to top end-->
+
+        <!--script files-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/moderniz.min.js" type="text/javascript"></script>
+        <script src="js/jquery-migrate.min.js" type="text/javascript"></script> 
+        <script src="js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
+        <script src="js/wow.min.js" type="text/javascript"></script>
+        <script src="js/jquery.sticky.js" type="text/javascript"></script>        
+        <script src="js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="js/jquery.stellar.min.js" type="text/javascript"></script>
+        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js" type="text/javascript"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/easypiechart.js"></script>
+        <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+        <!--image loads plugin -->
+        <script src="js/jquery.imagesloaded.min.js" type="text/javascript"></script>
+        <script src="js/jquery.counterup.min.js" type="text/javascript"></script>
+        <script src="js/jquery.countdown.js" type="text/javascript"></script>
+        <script src="js/contact_me.js" type="text/javascript"></script>
+        <script src="js/jqBootstrapValidation.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+        <!--revolution slider plugins-->
+        <script src="rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+        <script src="rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+        <script src="js/revolution-custom.js" type="text/javascript"></script>
+        <script src="js/isotope-custom.js" type="text/javascript"></script>
+        <script src="js/pace.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+            var myLatlng;
+            var map;
+            var marker;
+
+            function initialize() {
+                /*myLatlng = new google.maps.LatLng(37.397802, -121.890288);
+
+                var mapOptions = {
+                    zoom: 13,
+                    center: myLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    scrollwheel: false,
+                    draggable: false
+                };
+                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+                var contentString = '<p>123 My Street, Codeon City, CA 4567</p>';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: 'Marker'
+                });
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, marker);
+                });*/
+            }
+
+            //google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+
+    </body>
 </html>
