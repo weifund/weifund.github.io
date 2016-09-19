@@ -1,10 +1,10 @@
-/* 
+/*
     project   : Codeon v3.0.1
     Created on : May 31, 2014, 10:42:39 AM
     Author     : design_mylife
     Description: clean modern one page Template.
     updated on August 15, 2015
-       
+
 
     old color: 337ab7
 
@@ -268,6 +268,40 @@ bootstrap navbar overrides
   font-weight: 300;
   font-size: 45px; }
 
+.element {
+    color: #fff;
+    letter-spacing: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    line-height: 1.2em;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 /*******************
 page-head section
 *******************/
@@ -423,6 +457,50 @@ social icons css here
 .social-colored li a i.icon-in {
   background-color: #007bb6; }
 
+
+/****************************
+Vision section
+****************************/
+
+#vision {
+  padding-top: 30px;
+}
+
+#vision .container .row .col-sm-12 h2 {
+  text-align: center;
+}
+
+#vision .container .row .col-sm-12 h4 {
+  text-align: center;
+}
+
+hr {
+  background-color: black;
+  border: 0 none;
+  color: black;
+  height: 2px;
+}
+
+/****************************
+Problem section
+****************************/
+
+#problem {
+  padding-top: 30px;
+}
+
+h6 {
+  line-height: 30px;
+}
+
+/****************************
+Features section
+****************************/
+
+#features {
+  padding-top: 0;
+}
+
 /****************************
 About section
 ****************************/
@@ -490,7 +568,7 @@ h3.heading-progress {
 
 /*purchase now section*/
 .purchase-now {
-  background-image: url("../img/bg-1.jpg");
+  background-color: #337ab7;
   width: 100%;
   padding: 120px 0;
   background-size: cover;
@@ -503,16 +581,12 @@ h3.heading-progress {
   color: #fff;
   font-size: 26px; }
 
-.purchase-now .btn-theme-color {
-  float: right; }
 
 /**********************************
 
   services section css here
 
 ***********************************/
-.services-section-1 {
-  margin-bottom: 30px; }
 
 .services-icon {
   margin-bottom: 20px; }
@@ -1084,7 +1158,6 @@ iframe {
   position: relative; }
 
 .services-section-2 {
-  background-image: url(../img/bg-3.jpg);
   padding: 90px 0;
   background-color: #337ab7;
   background-position: center top;
@@ -1117,7 +1190,6 @@ iframe {
 
 /**testi***/
 .testi {
-  background-image: url(../img/bg-1.jpg);
   padding: 90px 0;
   background-position: center top;
   background-size: cover;
@@ -1127,7 +1199,8 @@ iframe {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  width: 100%;}
 
 .testi h4 {
   color: #fff;
