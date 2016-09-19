@@ -616,7 +616,8 @@ h3.heading-progress {
 .services-info h3 {
   margin-top: 0;
   font-weight: 600;
-  font-size: 20px; }
+  font-size: 20px;
+  color: grey; }
 
 .services-right img {
   margin-bottom: 50px; }
