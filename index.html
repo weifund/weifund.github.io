@@ -558,6 +558,20 @@
 
             </div><!--work section-->
 
+            <!--work section-->
+                 <section id="more" class="padding-80" style="background-color:#F1F1F1;">                  <div class="container" style="text-align:center;">
+                    <div class="section-heading text center">
+                       <h2 class="large-section-title"> More Campaigns </h2>
+                     </div>
+                   </div>
+                     <div id="campaigns" class="owl-carousel owl-theme img-fluid">
+
+                          <div class="item"><img src="img/rsz_consensys.jpg" alt="Consensys"></div>
+                          <div class="item"><img src="img/rsz_gnosis.jpg" alt="Gnosis"></div>
+                         <div class="item"><img src="img/rsz_singular.jpg" alt="Singular DTV"></div>
+
+            </div><!--work section-->
+
             <!--testimonials-->
                <div class="testi parallax" id="team" data-stellar-background-ratio="0.5">
                 <div class="container">
@@ -1003,6 +1017,25 @@
             });
           });
       </script>
+      <script>
+                     $(document).ready(function() {
+
+                        $("#campaigns").owlCarousel({
+                              navigation: false, // Show next and prev buttons
+                            slideSpeed: 200,
+                            paginationSpeed: 400,
+                             singleItem: true
+
+                             // "singleItem:true" is a shortcut for:
+                            // items : 1,
+                            // itemsDesktop : false,
+                            // itemsDesktopSmall : false,
+                            // itemsTablet: false,
+                            // itemsMobile : false
+                        });
+
+                    });
+                </script>
 
     </body>
 </html>
