@@ -275,10 +275,11 @@ bootstrap navbar overrides
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     line-height: 1.2em;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0 0 20px 0;
     margin: 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .typed-cursor{
@@ -1549,6 +1550,20 @@ label span {
     color:white;
      font-weight:100;
      font-size: 22px;
+   }
+
+   .campaign-head {
+     color: grey;
+     font-weight: 200;
+   }
+
+   .campaign-body {
+     font-weight: 400;
+   }
+
+   .campaign-head-dark {
+     color: #4d4d4d;
+     font-weight: 400;
    }
 
 @-webkit-keyframes pace-spinner {
