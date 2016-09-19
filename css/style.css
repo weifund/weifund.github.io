@@ -1551,6 +1551,11 @@ label span {
     font-size: 22px;
   }
 
+  .campaign-head {
+    color: grey;
+    font-weight: 400;
+  }
+
 @-webkit-keyframes pace-spinner {
   0% {
     -webkit-transform: rotate(0deg);
