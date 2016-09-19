@@ -1544,6 +1544,12 @@ label span {
   -o-animation: pace-spinner 400ms linear infinite;
   animation: pace-spinner 400ms linear infinite; }
 
+  .bio-name {
+    color:white;
+    font-weight:100;
+    font-size: 22px;
+  }
+
 @-webkit-keyframes pace-spinner {
   0% {
     -webkit-transform: rotate(0deg);
