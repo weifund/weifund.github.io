@@ -1567,6 +1567,20 @@ label span {
      font-weight: 400;
    }
 
+   .text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .lead {
+    margin:2% 17% 3% 17%;
+    color: #e6e6e6;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
 @-webkit-keyframes pace-spinner {
   0% {
     -webkit-transform: rotate(0deg);
