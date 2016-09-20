@@ -143,13 +143,13 @@ h2.slide-btm-text {
 
 .main-flex-slider {
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;}
 
 .main-flex-slider h1 {
-  font-size: 4em;
+  font-size: 3em;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 60px;
   margin: 0; }
 
@@ -1565,6 +1565,20 @@ label span {
      color: #4d4d4d;
      font-weight: 400;
    }
+
+   .text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .lead {
+    margin:2% 17% 3% 17%;
+    color: #e6e6e6;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
 
 @-webkit-keyframes pace-spinner {
   0% {
