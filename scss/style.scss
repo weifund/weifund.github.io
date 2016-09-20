@@ -1,10 +1,10 @@
-/* 
+/*
     project   : Codeon v3.0.1
     Created on : May 31, 2014, 10:42:39 AM
     Author     : design_mylife
     Description: clean modern one page Template.
     updated on August 15, 2015
-       
+
 */
 
 
@@ -17,7 +17,7 @@
 /*--------------base-------
 */
 
-html, 
+html,
 body {
     height: 100%;
     color: #121212;
@@ -27,7 +27,7 @@ body {
     font-weight: 400;
     color: $base-color;
     -webkit-font-smoothing: antialiased;
-    
+
 }
 /*typography bootstrap overrides*/
 h1, h2, h3, h4, h5, h6 {
@@ -63,8 +63,8 @@ p{
 }
 a {
     background: transparent;
-    outline: none; 
-    text-decoration: none;	
+    outline: none;
+    text-decoration: none;
     @include transition (0.4s cubic-bezier(0.25,.46,.45,.94));
     -webkit-transition-property: background-color,color;
     transition-property: background-color,color;
@@ -72,9 +72,9 @@ a {
 a:active,
 a:hover,
 a:focus {
-    outline: 0; 
+    outline: 0;
     color: $skincolor ;
-    text-decoration: none;	  
+    text-decoration: none;
 }
 .padding-80{
     padding: 80px 0;
@@ -370,7 +370,7 @@ blog section css here
 .comment-list img{
     max-width:64px;
     width:64px;
-    height: 64px;    
+    height: 64px;
  @include border-radius (32px);
     float: left;
     margin-right: 15px;
@@ -627,7 +627,7 @@ input[type="color"]:focus,
   @include box-shadow (none);
 }
 #contactForm .form-group{
-    margin-bottom: 0px !important; 
+    margin-bottom: 0px !important;
 }
 
 
@@ -764,12 +764,12 @@ our work section
 @media(max-width:768px){
     .work-col-4 .project-post, .work-col-3 .project-post, .work-fullwidth .project-post, .work-masonry .project-post{
         width:50%;
-    } 
+    }
 }
 @media(max-width:568px){
     .work-col-4 .project-post, .work-col-3 .project-post, .work-fullwidth .project-post, .work-masonry .project-post{
         width:100%;
-    } 
+    }
 }
 #portfolio-masonry{
     padding-top: 50px;
@@ -829,7 +829,7 @@ our work section
     font-weight: 600;
     margin-top: -10px;
     width: 100%;
-   @include transition (all 0.3s ease-out); 
+   @include transition (all 0.3s ease-out);
 }
 .image-wrapper:hover .image-overlay{
     opacity: 1;
@@ -1059,13 +1059,13 @@ our work section
     .call-sec{
         width:100% !important;
         margin: 0 0 0 0 !important;
-    }  
+    }
 
     .slide-btm-text{
         display: none;
     }
     #page-head-bg h1{
-        font-size: 3em; 
+        font-size: 3em;
     }
     .purchase-now{
         text-align: center !important;
@@ -1089,7 +1089,7 @@ our work section
         margin-bottom: 30px;
     }
     .home-arrow-down{
-        margin-top: 30px;  
+        margin-top: 30px;
     }
 
 }
@@ -1160,7 +1160,7 @@ iframe{
     font-size: 50px;
 }
 .fact-inner h4{
-    color: #fff;
+    /**color: #fff;**/
     font-weight: 400;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -1169,7 +1169,7 @@ iframe{
 
 /**testi***/
 .testi{
-    background-image:url(../img/bg-1.jpg); 
+    background-image:url(../img/bg-1.jpg);
     padding: 90px 0;
     background-position: center top;
     background-size: cover;
@@ -1221,7 +1221,7 @@ iframe{
     line-height: 44px;
 }
 .soon h2{
-    margin-bottom: 60px;  
+    margin-bottom: 60px;
     font-weight: 200;
     color:#777;
 }
@@ -1237,7 +1237,7 @@ iframe{
     font-size:44px;
     padding-top:25px;
     line-height:20px;
-    font-weight:400; 
+    font-weight:400;
     color:$skincolor;
 
 }
@@ -1323,7 +1323,7 @@ label span{
     height: 40px;
     line-height: 40px;
     text-align: center;
-    text-align:center; 
+    text-align:center;
     background: whiteSmoke;
     font-weight: bold;
     color: #fff;
