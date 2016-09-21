@@ -921,6 +921,123 @@ our work section
   font-size: 13px;
   font-family: "Open Sans", sans-serif; }
 
+  /****** Carousel *********/
+
+  .carousel-control.left {
+      background: none;
+  }
+
+  .carousel-control.right {
+      background: none;
+  }
+
+  .carousel-control {
+      position: absolute;
+      top: 45%;
+      bottom: 0;
+      left: 0;
+      width: 15%;
+      font-size: auto;
+      color: #fff;
+      text-align: center;
+      opacity: 1;
+      text-shadow: none;
+  }
+
+  .carousel-control:hover {
+      color: #000;
+  }
+
+  .carousel-indicators {
+      bottom: -50px;
+  }
+
+  .carousel-indicators li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: #000\9;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #337AB7;
+      border-radius: 50%;
+  }
+
+  .carousel-indicators .active {
+      width: 12px;
+      height: 12px;
+      margin: 0;
+      background-color: #337AB7;
+  }
+
+  .carousel-caption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+  }
+
+  .carousel-caption h2{
+    color: white !important;
+    font-weight: 800px;
+  }
+
+  .carousel-caption p{
+    color: white !important;
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bg-overlay-gnosis {
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/rsz_gnosis.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: #fff;
+      height: 450px;
+      padding-top: 50px;
+  }
+
+  .bg-overlay-singular {
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/rsz_singular.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: #fff;
+      height: 450px;
+      padding-top: 50px;
+  }
+
+  .bg-overlay-consensys {
+      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../img/rsz_consensys.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: #fff;
+      height: 450px;
+      padding-top: 50px;
+  }
+
+  .row h1 {
+    color: white !important;
+  }
+
+  .row h4{
+    color: white !important;
+  }
+
+
+
 /*****************team*******************/
 .work-section-2 {
   background-color: #fff;
