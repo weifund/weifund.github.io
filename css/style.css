@@ -623,7 +623,7 @@ h3.heading-progress {
   margin-bottom: 50px; }
 
 .services-section-2 {
-  padding: 90px 0; }
+  padding: 20px 0; }
 
 .services-section-2 h1 {
   margin-top: 0;
@@ -651,7 +651,7 @@ input[type="month"],
 input[type="time"],
 input[type="week"],
 input[type="number"],
-input[type="email"],
+input[type="  "],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
